@@ -17,16 +17,23 @@ class GTTabBarViewController: UITabBarController {
     
     func createControllers() {
         
+        self.tabBar.tintColor = UIColor.black
         // 书架
-        let bookShelf = GTBookShelfViewController()
-        let bookItem = UITabBarItem(title: "书架", image: UIImage(named: ""), selectedImage: UIImage(named: ""))
-        bookShelf.tabBarItem = bookItem
+        let bookNav = GTBaseNavigationViewController(rootViewController: GTBookShelfViewController())
+        let bookItem = UITabBarItem(title: "书架", image: UIImage(named: "shelf"), selectedImage: UIImage(named: "shelf_selected"))
+        bookNav.tabBarItem = bookItem
         
         // 个人
-        let mineVC = GTMineViewController()
-        let mineItem = UITabBarItem(title: "个人", image: UIImage(named: ""), selectedImage: UIImage(named: ""))
-        mineVC.tabBarItem = mineItem
+        let mineNav = GTBaseNavigationViewController(rootViewController: GTMineViewController())
+        let mineItem = UITabBarItem(title: "个人", image: UIImage(named: "mine"), selectedImage: UIImage(named: "mine_selected"))
+        mineNav.tabBarItem = mineItem
         
-        self.viewControllers = [bookShelf, mineVC]
+        self.viewControllers = [bookNav, mineNav]
+    }
+}
+
+extension UITabBar {
+    open override var traitCollection: UITraitCollection{
+        return UITraitCollection(horizontalSizeClass: .compact)
     }
 }

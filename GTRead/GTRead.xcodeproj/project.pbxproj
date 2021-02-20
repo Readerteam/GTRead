@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AEE40E4625E0DDAE00C6E7CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE40E4525E0DDAE00C6E7CD /* AppDelegate.swift */; };
-		AEE40E4825E0DDAE00C6E7CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE40E4725E0DDAE00C6E7CD /* SceneDelegate.swift */; };
-		AEE40E4A25E0DDAE00C6E7CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE40E4925E0DDAE00C6E7CD /* ViewController.swift */; };
-		AEE40E4D25E0DDAE00C6E7CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE40E4B25E0DDAE00C6E7CD /* Main.storyboard */; };
-		AEE40E4F25E0DDB100C6E7CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEE40E4E25E0DDB100C6E7CD /* Assets.xcassets */; };
-		AEE40E5225E0DDB100C6E7CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE40E5025E0DDB100C6E7CD /* LaunchScreen.storyboard */; };
+		AE6DDCC925E12B3400C0773A /* GTBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCC825E12B3400C0773A /* GTBaseViewController.swift */; };
+		AE6DDCCE25E12B8300C0773A /* GTBaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCCD25E12B8300C0773A /* GTBaseNavigationViewController.swift */; };
+		AE6DDCD325E12BBF00C0773A /* GTTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCD225E12BBF00C0773A /* GTTabBarViewController.swift */; };
+		AE6DDCE425E12D1900C0773A /* GTBookShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCE325E12D1900C0773A /* GTBookShelfViewController.swift */; };
+		AE6DDCE925E12D2900C0773A /* GTMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCE825E12D2900C0773A /* GTMineViewController.swift */; };
 		AEE40E5D25E0DDB100C6E7CD /* GTReadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE40E5C25E0DDB100C6E7CD /* GTReadTests.swift */; };
 		AEE40E6825E0DDB100C6E7CD /* GTReadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE40E6725E0DDB100C6E7CD /* GTReadUITests.swift */; };
+		AEE40E9825E120BE00C6E7CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE40E9625E120BE00C6E7CD /* AppDelegate.swift */; };
+		AEE40E9925E120BE00C6E7CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE40E9725E120BE00C6E7CD /* SceneDelegate.swift */; };
+		AEE40EA525E120D900C6E7CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEE40E9F25E120D900C6E7CD /* Assets.xcassets */; };
+		AEE40EA625E120D900C6E7CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE40EA025E120D900C6E7CD /* LaunchScreen.storyboard */; };
+		AEE40EA725E120D900C6E7CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE40EA225E120D900C6E7CD /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,20 +39,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE6DDCC825E12B3400C0773A /* GTBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTBaseViewController.swift; sourceTree = "<group>"; };
+		AE6DDCCD25E12B8300C0773A /* GTBaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTBaseNavigationViewController.swift; sourceTree = "<group>"; };
+		AE6DDCD225E12BBF00C0773A /* GTTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTTabBarViewController.swift; sourceTree = "<group>"; };
+		AE6DDCE325E12D1900C0773A /* GTBookShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTBookShelfViewController.swift; sourceTree = "<group>"; };
+		AE6DDCE825E12D2900C0773A /* GTMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTMineViewController.swift; sourceTree = "<group>"; };
 		AEE40E4225E0DDAE00C6E7CD /* GTRead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GTRead.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AEE40E4525E0DDAE00C6E7CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AEE40E4725E0DDAE00C6E7CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AEE40E4925E0DDAE00C6E7CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AEE40E4C25E0DDAE00C6E7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AEE40E4E25E0DDB100C6E7CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AEE40E5125E0DDB100C6E7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AEE40E5325E0DDB100C6E7CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEE40E5825E0DDB100C6E7CD /* GTReadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GTReadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE40E5C25E0DDB100C6E7CD /* GTReadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTReadTests.swift; sourceTree = "<group>"; };
 		AEE40E5E25E0DDB100C6E7CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEE40E6325E0DDB100C6E7CD /* GTReadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GTReadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE40E6725E0DDB100C6E7CD /* GTReadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTReadUITests.swift; sourceTree = "<group>"; };
 		AEE40E6925E0DDB100C6E7CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEE40E9625E120BE00C6E7CD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AEE40E9725E120BE00C6E7CD /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AEE40E9F25E120D900C6E7CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AEE40EA125E120D900C6E7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AEE40EA325E120D900C6E7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AEE40EA425E120D900C6E7CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE6DDAE625E1287B00C0773A /* BookShelf */ = {
+			isa = PBXGroup;
+			children = (
+				AE6DDCE325E12D1900C0773A /* GTBookShelfViewController.swift */,
+			);
+			path = BookShelf;
+			sourceTree = "<group>";
+		};
+		AE6DDCC625E12ADB00C0773A /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				AE6DDCE825E12D2900C0773A /* GTMineViewController.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		AE6DDCC725E12B1100C0773A /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AE6DDCC825E12B3400C0773A /* GTBaseViewController.swift */,
+				AE6DDCCD25E12B8300C0773A /* GTBaseNavigationViewController.swift */,
+			);
+			name = BaseViewController;
+			path = GTRead/BaseViewController;
+			sourceTree = SOURCE_ROOT;
+		};
 		AEE40E3925E0DDAE00C6E7CD = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +133,13 @@
 		AEE40E4425E0DDAE00C6E7CD /* GTRead */ = {
 			isa = PBXGroup;
 			children = (
-				AEE40E4525E0DDAE00C6E7CD /* AppDelegate.swift */,
-				AEE40E4725E0DDAE00C6E7CD /* SceneDelegate.swift */,
-				AEE40E4925E0DDAE00C6E7CD /* ViewController.swift */,
-				AEE40E4B25E0DDAE00C6E7CD /* Main.storyboard */,
-				AEE40E4E25E0DDB100C6E7CD /* Assets.xcassets */,
-				AEE40E5025E0DDB100C6E7CD /* LaunchScreen.storyboard */,
-				AEE40E5325E0DDB100C6E7CD /* Info.plist */,
+				AEE40E9525E120BE00C6E7CD /* Application */,
+				AEF8284625E12EA000A28C0E /* TabBar */,
+				AE6DDCC725E12B1100C0773A /* BaseViewController */,
+				AEE40E9D25E120C800C6E7CD /* Classes */,
+				AEE40E9E25E120D900C6E7CD /* Resource */,
+				AEE40EAC25E120E500C6E7CD /* Common */,
+				AEE40EAD25E120EE00C6E7CD /* Tool */,
 			);
 			path = GTRead;
 			sourceTree = "<group>";
@@ -127,6 +161,59 @@
 			);
 			path = GTReadUITests;
 			sourceTree = "<group>";
+		};
+		AEE40E9525E120BE00C6E7CD /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				AEE40E9625E120BE00C6E7CD /* AppDelegate.swift */,
+				AEE40E9725E120BE00C6E7CD /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		AEE40E9D25E120C800C6E7CD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AE6DDAE625E1287B00C0773A /* BookShelf */,
+				AE6DDCC625E12ADB00C0773A /* Mine */,
+			);
+			name = Classes;
+			path = GTRead/Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		AEE40E9E25E120D900C6E7CD /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				AEE40E9F25E120D900C6E7CD /* Assets.xcassets */,
+				AEE40EA025E120D900C6E7CD /* LaunchScreen.storyboard */,
+				AEE40EA225E120D900C6E7CD /* Main.storyboard */,
+				AEE40EA425E120D900C6E7CD /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		AEE40EAC25E120E500C6E7CD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		AEE40EAD25E120EE00C6E7CD /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		AEF8284625E12EA000A28C0E /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				AE6DDCD225E12BBF00C0773A /* GTTabBarViewController.swift */,
+			);
+			name = TabBar;
+			path = GTRead/TabBar;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -190,6 +277,7 @@
 		AEE40E3A25E0DDAE00C6E7CD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = GT;
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
@@ -231,9 +319,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEE40E5225E0DDB100C6E7CD /* LaunchScreen.storyboard in Resources */,
-				AEE40E4F25E0DDB100C6E7CD /* Assets.xcassets in Resources */,
-				AEE40E4D25E0DDAE00C6E7CD /* Main.storyboard in Resources */,
+				AEE40EA725E120D900C6E7CD /* Main.storyboard in Resources */,
+				AEE40EA525E120D900C6E7CD /* Assets.xcassets in Resources */,
+				AEE40EA625E120D900C6E7CD /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +346,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEE40E4A25E0DDAE00C6E7CD /* ViewController.swift in Sources */,
-				AEE40E4625E0DDAE00C6E7CD /* AppDelegate.swift in Sources */,
-				AEE40E4825E0DDAE00C6E7CD /* SceneDelegate.swift in Sources */,
+				AE6DDCCE25E12B8300C0773A /* GTBaseNavigationViewController.swift in Sources */,
+				AEE40E9825E120BE00C6E7CD /* AppDelegate.swift in Sources */,
+				AE6DDCD325E12BBF00C0773A /* GTTabBarViewController.swift in Sources */,
+				AE6DDCE925E12D2900C0773A /* GTMineViewController.swift in Sources */,
+				AE6DDCC925E12B3400C0773A /* GTBaseViewController.swift in Sources */,
+				AEE40E9925E120BE00C6E7CD /* SceneDelegate.swift in Sources */,
+				AE6DDCE425E12D1900C0773A /* GTBookShelfViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,20 +388,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AEE40E4B25E0DDAE00C6E7CD /* Main.storyboard */ = {
+		AEE40EA025E120D900C6E7CD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AEE40E4C25E0DDAE00C6E7CD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AEE40E5025E0DDB100C6E7CD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AEE40E5125E0DDB100C6E7CD /* Base */,
+				AEE40EA125E120D900C6E7CD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AEE40EA225E120D900C6E7CD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEE40EA325E120D900C6E7CD /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -438,7 +530,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y2RFU452P5;
-				INFOPLIST_FILE = GTRead/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GTRead/Resource/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,7 +539,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gtread.GTRead;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -457,7 +550,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y2RFU452P5;
-				INFOPLIST_FILE = GTRead/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GTRead/Resource/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +559,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gtread.GTRead;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

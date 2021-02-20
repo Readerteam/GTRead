@@ -7,23 +7,19 @@
 
 import UIKit
 
-class GTMineViewController: UIViewController {
+class GTMineViewController: GTBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.setupView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupView() {
+        self.view.backgroundColor = UIColor.white
+        
+        // 导航条设置
+        self.title = "个人"
     }
-    */
 
 }
