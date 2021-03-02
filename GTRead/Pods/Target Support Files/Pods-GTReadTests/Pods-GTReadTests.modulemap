@@ -1,0 +1,6 @@
+framework module Pods_GTReadTests {
+  umbrella header "Pods-GTReadTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

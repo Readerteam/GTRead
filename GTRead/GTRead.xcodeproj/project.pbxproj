@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E94E694AD967475FB6262D8 /* Pods_GTRead_GTReadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCF3F60C55F91B4E58ED9B3 /* Pods_GTRead_GTReadUITests.framework */; };
+		7A9998051B8863AA528DED3E /* Pods_GTRead.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7736EBA3C55BCE74C1F239F7 /* Pods_GTRead.framework */; };
 		AE6DDCC925E12B3400C0773A /* GTBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCC825E12B3400C0773A /* GTBaseViewController.swift */; };
 		AE6DDCCE25E12B8300C0773A /* GTBaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCCD25E12B8300C0773A /* GTBaseNavigationViewController.swift */; };
 		AE6DDCD325E12BBF00C0773A /* GTTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCD225E12BBF00C0773A /* GTTabBarViewController.swift */; };
@@ -19,6 +21,7 @@
 		AEE40EA525E120D900C6E7CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEE40E9F25E120D900C6E7CD /* Assets.xcassets */; };
 		AEE40EA625E120D900C6E7CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE40EA025E120D900C6E7CD /* LaunchScreen.storyboard */; };
 		AEE40EA725E120D900C6E7CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE40EA225E120D900C6E7CD /* Main.storyboard */; };
+		E9C6C138E19C2B81657B3AF1 /* Pods_GTReadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5296FA67F20FFA2759B04644 /* Pods_GTReadTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D2F0D0CC889568E7A272E7A /* Pods-GTRead-GTReadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTRead-GTReadUITests.debug.xcconfig"; path = "Target Support Files/Pods-GTRead-GTReadUITests/Pods-GTRead-GTReadUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		10DD16B40019F3F082A8AC15 /* Pods-GTRead.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTRead.release.xcconfig"; path = "Target Support Files/Pods-GTRead/Pods-GTRead.release.xcconfig"; sourceTree = "<group>"; };
+		5296FA67F20FFA2759B04644 /* Pods_GTReadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GTReadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DCF3F60C55F91B4E58ED9B3 /* Pods_GTRead_GTReadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GTRead_GTReadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7736EBA3C55BCE74C1F239F7 /* Pods_GTRead.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GTRead.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9479237C85C60CBB3EB75964 /* Pods-GTRead-GTReadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTRead-GTReadUITests.release.xcconfig"; path = "Target Support Files/Pods-GTRead-GTReadUITests/Pods-GTRead-GTReadUITests.release.xcconfig"; sourceTree = "<group>"; };
+		94CB0EA52D5D83DA63E9853B /* Pods-GTRead.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTRead.debug.xcconfig"; path = "Target Support Files/Pods-GTRead/Pods-GTRead.debug.xcconfig"; sourceTree = "<group>"; };
+		970A0AF2392A8CD611363A14 /* Pods-GTReadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTReadTests.debug.xcconfig"; path = "Target Support Files/Pods-GTReadTests/Pods-GTReadTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE6DDCC825E12B3400C0773A /* GTBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTBaseViewController.swift; sourceTree = "<group>"; };
 		AE6DDCCD25E12B8300C0773A /* GTBaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTBaseNavigationViewController.swift; sourceTree = "<group>"; };
 		AE6DDCD225E12BBF00C0773A /* GTTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTTabBarViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +68,7 @@
 		AEE40EA125E120D900C6E7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEE40EA325E120D900C6E7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AEE40EA425E120D900C6E7CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECEBD343F3440C1FA06D8ABF /* Pods-GTReadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTReadTests.release.xcconfig"; path = "Target Support Files/Pods-GTReadTests/Pods-GTReadTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A9998051B8863AA528DED3E /* Pods_GTRead.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9C6C138E19C2B81657B3AF1 /* Pods_GTReadTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +92,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E94E694AD967475FB6262D8 /* Pods_GTRead_GTReadUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C7A8BEB9D831ABC0176E35E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7736EBA3C55BCE74C1F239F7 /* Pods_GTRead.framework */,
+				5DCF3F60C55F91B4E58ED9B3 /* Pods_GTRead_GTReadUITests.framework */,
+				5296FA67F20FFA2759B04644 /* Pods_GTReadTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AE6DDAE625E1287B00C0773A /* BookShelf */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +135,13 @@
 			path = GTRead/BaseViewController;
 			sourceTree = SOURCE_ROOT;
 		};
+		AEA6E1F925EE12A500148B95 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
 		AEE40E3925E0DDAE00C6E7CD = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +149,8 @@
 				AEE40E5B25E0DDB100C6E7CD /* GTReadTests */,
 				AEE40E6625E0DDB100C6E7CD /* GTReadUITests */,
 				AEE40E4325E0DDAE00C6E7CD /* Products */,
+				EB1BF41AFB4E335A24066273 /* Pods */,
+				6C7A8BEB9D831ABC0176E35E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,6 +236,7 @@
 		AEE40EAD25E120EE00C6E7CD /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				AEA6E1F925EE12A500148B95 /* NetWork */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -215,6 +250,19 @@
 			path = GTRead/TabBar;
 			sourceTree = SOURCE_ROOT;
 		};
+		EB1BF41AFB4E335A24066273 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				94CB0EA52D5D83DA63E9853B /* Pods-GTRead.debug.xcconfig */,
+				10DD16B40019F3F082A8AC15 /* Pods-GTRead.release.xcconfig */,
+				0D2F0D0CC889568E7A272E7A /* Pods-GTRead-GTReadUITests.debug.xcconfig */,
+				9479237C85C60CBB3EB75964 /* Pods-GTRead-GTReadUITests.release.xcconfig */,
+				970A0AF2392A8CD611363A14 /* Pods-GTReadTests.debug.xcconfig */,
+				ECEBD343F3440C1FA06D8ABF /* Pods-GTReadTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,9 +270,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEE40E6C25E0DDB100C6E7CD /* Build configuration list for PBXNativeTarget "GTRead" */;
 			buildPhases = (
+				B0EAF1C30C3A8EC373599E88 /* [CP] Check Pods Manifest.lock */,
 				AEE40E3E25E0DDAE00C6E7CD /* Sources */,
 				AEE40E3F25E0DDAE00C6E7CD /* Frameworks */,
 				AEE40E4025E0DDAE00C6E7CD /* Resources */,
+				2136D3A63AB1461D833128C6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,6 +289,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEE40E6F25E0DDB100C6E7CD /* Build configuration list for PBXNativeTarget "GTReadTests" */;
 			buildPhases = (
+				324E9BF02EE02C1814CBA99A /* [CP] Check Pods Manifest.lock */,
 				AEE40E5425E0DDB100C6E7CD /* Sources */,
 				AEE40E5525E0DDB100C6E7CD /* Frameworks */,
 				AEE40E5625E0DDB100C6E7CD /* Resources */,
@@ -257,9 +308,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEE40E7225E0DDB100C6E7CD /* Build configuration list for PBXNativeTarget "GTReadUITests" */;
 			buildPhases = (
+				17A58B03BA069B99D56E17FB /* [CP] Check Pods Manifest.lock */,
 				AEE40E5F25E0DDB100C6E7CD /* Sources */,
 				AEE40E6025E0DDB100C6E7CD /* Frameworks */,
 				AEE40E6125E0DDB100C6E7CD /* Resources */,
+				D79523EAD8A9098A5AD20586 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -340,6 +393,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17A58B03BA069B99D56E17FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GTRead-GTReadUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2136D3A63AB1461D833128C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GTRead/Pods-GTRead-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GTRead/Pods-GTRead-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GTRead/Pods-GTRead-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		324E9BF02EE02C1814CBA99A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GTReadTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0EAF1C30C3A8EC373599E88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GTRead-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D79523EAD8A9098A5AD20586 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GTRead-GTReadUITests/Pods-GTRead-GTReadUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GTRead-GTReadUITests/Pods-GTRead-GTReadUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GTRead-GTReadUITests/Pods-GTRead-GTReadUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AEE40E3E25E0DDAE00C6E7CD /* Sources */ = {
@@ -525,6 +681,7 @@
 		};
 		AEE40E6D25E0DDB100C6E7CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94CB0EA52D5D83DA63E9853B /* Pods-GTRead.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -545,6 +702,7 @@
 		};
 		AEE40E6E25E0DDB100C6E7CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10DD16B40019F3F082A8AC15 /* Pods-GTRead.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -565,6 +723,7 @@
 		};
 		AEE40E7025E0DDB100C6E7CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 970A0AF2392A8CD611363A14 /* Pods-GTReadTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -587,6 +746,7 @@
 		};
 		AEE40E7125E0DDB100C6E7CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECEBD343F3440C1FA06D8ABF /* Pods-GTReadTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -609,6 +769,7 @@
 		};
 		AEE40E7325E0DDB100C6E7CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D2F0D0CC889568E7A272E7A /* Pods-GTRead-GTReadUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -629,6 +790,7 @@
 		};
 		AEE40E7425E0DDB100C6E7CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9479237C85C60CBB3EB75964 /* Pods-GTRead-GTReadUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
