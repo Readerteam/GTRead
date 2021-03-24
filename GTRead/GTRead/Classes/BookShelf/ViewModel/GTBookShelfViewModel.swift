@@ -79,6 +79,7 @@ extension GTBookShelfViewModel: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if self.pdfURLs.count > indexPath.row {
             let vc = GTReadViewController(path: self.pdfURLs[indexPath.row])
+            vc.hidesBottomBarWhenPushed = true;
             self.viewController.navigationController?.pushViewController(vc, animated: true)
         }
     }
