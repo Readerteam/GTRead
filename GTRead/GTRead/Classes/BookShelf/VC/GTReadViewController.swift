@@ -89,6 +89,7 @@ class GTReadViewController: GTBaseViewController {
     @objc func backButtonDidClicked() {
         GTBook.shared.cacheData()
         // 退出
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.navigationController?.popViewController(animated: true)
     }
     
