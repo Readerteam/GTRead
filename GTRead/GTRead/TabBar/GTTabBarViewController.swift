@@ -33,7 +33,12 @@ class GTTabBarViewController: UITabBarController {
 }
 
 extension UITabBar {
-    open override var traitCollection: UITraitCollection{
-        return UITraitCollection(horizontalSizeClass: .compact)
+    public override var traitCollection: UITraitCollection {
+        var newTraitCollection: [UITraitCollection] = [super.traitCollection]
+        // I need to force size class on iPad
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            newTraitCollection += [UITraitCollection(verticalSizeClass: .regular), UITraitCollection(horizontalSizeClass: .compact)]
+        }
+        return UITraitCollection(traitsFrom: newTraitCollection)
     }
 }

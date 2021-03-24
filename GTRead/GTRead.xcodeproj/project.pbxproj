@@ -14,6 +14,14 @@
 		AE6DDCD325E12BBF00C0773A /* GTTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCD225E12BBF00C0773A /* GTTabBarViewController.swift */; };
 		AE6DDCE425E12D1900C0773A /* GTBookShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCE325E12D1900C0773A /* GTBookShelfViewController.swift */; };
 		AE6DDCE925E12D2900C0773A /* GTMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCE825E12D2900C0773A /* GTMineViewController.swift */; };
+		AEA6E60325EE4E2500148B95 /* GTNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6E60225EE4E2500148B95 /* GTNet.swift */; };
+		AECB23942606EA56001B2C84 /* GTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECB23932606EA56001B2C84 /* GTApp.swift */; };
+		AECB23992606EE64001B2C84 /* GTBookShelfViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECB23982606EE64001B2C84 /* GTBookShelfViewModel.swift */; };
+		AECB25892606F2C1001B2C84 /* 0.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AECB25882606F2C0001B2C84 /* 0.pdf */; };
+		AECB258E2606F2E0001B2C84 /* 1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AECB258D2606F2E0001B2C84 /* 1.pdf */; };
+		AECB25932606F2ED001B2C84 /* 2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AECB25922606F2ED001B2C84 /* 2.pdf */; };
+		AECB25982606F2FB001B2C84 /* 3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AECB25972606F2FB001B2C84 /* 3.pdf */; };
+		AECB259D2606F308001B2C84 /* 4.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AECB259C2606F308001B2C84 /* 4.pdf */; };
 		AEE40E5D25E0DDB100C6E7CD /* GTReadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE40E5C25E0DDB100C6E7CD /* GTReadTests.swift */; };
 		AEE40E6825E0DDB100C6E7CD /* GTReadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE40E6725E0DDB100C6E7CD /* GTReadUITests.swift */; };
 		AEE40E9825E120BE00C6E7CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE40E9625E120BE00C6E7CD /* AppDelegate.swift */; };
@@ -21,6 +29,8 @@
 		AEE40EA525E120D900C6E7CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEE40E9F25E120D900C6E7CD /* Assets.xcassets */; };
 		AEE40EA625E120D900C6E7CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE40EA025E120D900C6E7CD /* LaunchScreen.storyboard */; };
 		AEE40EA725E120D900C6E7CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE40EA225E120D900C6E7CD /* Main.storyboard */; };
+		AEF2344A26084B2A00D2B4F8 /* GTBookCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF2344926084B2A00D2B4F8 /* GTBookCollectionCell.swift */; };
+		AEF2344F260865E600D2B4F8 /* GTReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF2344E260865E600D2B4F8 /* GTReadViewController.swift */; };
 		E9C6C138E19C2B81657B3AF1 /* Pods_GTReadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5296FA67F20FFA2759B04644 /* Pods_GTReadTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +65,14 @@
 		AE6DDCD225E12BBF00C0773A /* GTTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTTabBarViewController.swift; sourceTree = "<group>"; };
 		AE6DDCE325E12D1900C0773A /* GTBookShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTBookShelfViewController.swift; sourceTree = "<group>"; };
 		AE6DDCE825E12D2900C0773A /* GTMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTMineViewController.swift; sourceTree = "<group>"; };
+		AEA6E60225EE4E2500148B95 /* GTNet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTNet.swift; sourceTree = "<group>"; };
+		AECB23932606EA56001B2C84 /* GTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTApp.swift; sourceTree = "<group>"; };
+		AECB23982606EE64001B2C84 /* GTBookShelfViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTBookShelfViewModel.swift; sourceTree = "<group>"; };
+		AECB25882606F2C0001B2C84 /* 0.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 0.pdf; sourceTree = "<group>"; };
+		AECB258D2606F2E0001B2C84 /* 1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1.pdf; sourceTree = "<group>"; };
+		AECB25922606F2ED001B2C84 /* 2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 2.pdf; sourceTree = "<group>"; };
+		AECB25972606F2FB001B2C84 /* 3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 3.pdf; sourceTree = "<group>"; };
+		AECB259C2606F308001B2C84 /* 4.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 4.pdf; sourceTree = "<group>"; };
 		AEE40E4225E0DDAE00C6E7CD /* GTRead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GTRead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE40E5825E0DDB100C6E7CD /* GTReadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GTReadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE40E5C25E0DDB100C6E7CD /* GTReadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTReadTests.swift; sourceTree = "<group>"; };
@@ -68,6 +86,8 @@
 		AEE40EA125E120D900C6E7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEE40EA325E120D900C6E7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AEE40EA425E120D900C6E7CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEF2344926084B2A00D2B4F8 /* GTBookCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTBookCollectionCell.swift; sourceTree = "<group>"; };
+		AEF2344E260865E600D2B4F8 /* GTReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTReadViewController.swift; sourceTree = "<group>"; };
 		ECEBD343F3440C1FA06D8ABF /* Pods-GTReadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTReadTests.release.xcconfig"; path = "Target Support Files/Pods-GTReadTests/Pods-GTReadTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,7 +132,11 @@
 		AE6DDAE625E1287B00C0773A /* BookShelf */ = {
 			isa = PBXGroup;
 			children = (
-				AE6DDCE325E12D1900C0773A /* GTBookShelfViewController.swift */,
+				AECB25872606F2A4001B2C84 /* PDF */,
+				AEA2B3422606E853009090B7 /* Model */,
+				AEA2B3442606E854009090B7 /* View */,
+				AEA2B3452606E854009090B7 /* ViewModel */,
+				AEA2B3432606E854009090B7 /* VC */,
 			);
 			path = BookShelf;
 			sourceTree = "<group>";
@@ -135,11 +159,64 @@
 			path = GTRead/BaseViewController;
 			sourceTree = SOURCE_ROOT;
 		};
-		AEA6E1F925EE12A500148B95 /* NetWork */ = {
+		AEA2B3422606E853009090B7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AEA2B3432606E854009090B7 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				AE6DDCE325E12D1900C0773A /* GTBookShelfViewController.swift */,
+				AEF2344E260865E600D2B4F8 /* GTReadViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		AEA2B3442606E854009090B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AEF2344926084B2A00D2B4F8 /* GTBookCollectionCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AEA2B3452606E854009090B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AECB23982606EE64001B2C84 /* GTBookShelfViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AEA6E1F925EE12A500148B95 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				AEA6E60225EE4E2500148B95 /* GTNet.swift */,
+			);
 			path = NetWork;
+			sourceTree = "<group>";
+		};
+		AECB23922606EA38001B2C84 /* GTApp */ = {
+			isa = PBXGroup;
+			children = (
+				AECB23932606EA56001B2C84 /* GTApp.swift */,
+			);
+			path = GTApp;
+			sourceTree = "<group>";
+		};
+		AECB25872606F2A4001B2C84 /* PDF */ = {
+			isa = PBXGroup;
+			children = (
+				AECB25882606F2C0001B2C84 /* 0.pdf */,
+				AECB258D2606F2E0001B2C84 /* 1.pdf */,
+				AECB25922606F2ED001B2C84 /* 2.pdf */,
+				AECB25972606F2FB001B2C84 /* 3.pdf */,
+				AECB259C2606F308001B2C84 /* 4.pdf */,
+			);
+			path = PDF;
 			sourceTree = "<group>";
 		};
 		AEE40E3925E0DDAE00C6E7CD = {
@@ -172,7 +249,6 @@
 				AE6DDCC725E12B1100C0773A /* BaseViewController */,
 				AEE40E9D25E120C800C6E7CD /* Classes */,
 				AEE40E9E25E120D900C6E7CD /* Resource */,
-				AEE40EAC25E120E500C6E7CD /* Common */,
 				AEE40EAD25E120EE00C6E7CD /* Tool */,
 			);
 			path = GTRead;
@@ -226,16 +302,10 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		AEE40EAC25E120E500C6E7CD /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		AEE40EAD25E120EE00C6E7CD /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				AECB23922606EA38001B2C84 /* GTApp */,
 				AEA6E1F925EE12A500148B95 /* NetWork */,
 			);
 			path = Tool;
@@ -373,7 +443,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEE40EA725E120D900C6E7CD /* Main.storyboard in Resources */,
+				AECB259D2606F308001B2C84 /* 4.pdf in Resources */,
+				AECB25892606F2C1001B2C84 /* 0.pdf in Resources */,
+				AECB25982606F2FB001B2C84 /* 3.pdf in Resources */,
 				AEE40EA525E120D900C6E7CD /* Assets.xcassets in Resources */,
+				AECB25932606F2ED001B2C84 /* 2.pdf in Resources */,
+				AECB258E2606F2E0001B2C84 /* 1.pdf in Resources */,
 				AEE40EA625E120D900C6E7CD /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,13 +577,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEA6E60325EE4E2500148B95 /* GTNet.swift in Sources */,
 				AE6DDCCE25E12B8300C0773A /* GTBaseNavigationViewController.swift in Sources */,
 				AEE40E9825E120BE00C6E7CD /* AppDelegate.swift in Sources */,
+				AEF2344A26084B2A00D2B4F8 /* GTBookCollectionCell.swift in Sources */,
+				AECB23992606EE64001B2C84 /* GTBookShelfViewModel.swift in Sources */,
 				AE6DDCD325E12BBF00C0773A /* GTTabBarViewController.swift in Sources */,
 				AE6DDCE925E12D2900C0773A /* GTMineViewController.swift in Sources */,
 				AE6DDCC925E12B3400C0773A /* GTBaseViewController.swift in Sources */,
+				AECB23942606EA56001B2C84 /* GTApp.swift in Sources */,
 				AEE40E9925E120BE00C6E7CD /* SceneDelegate.swift in Sources */,
 				AE6DDCE425E12D1900C0773A /* GTBookShelfViewController.swift in Sources */,
+				AEF2344F260865E600D2B4F8 /* GTReadViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
