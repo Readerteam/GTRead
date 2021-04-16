@@ -27,7 +27,7 @@ class GTMineViewController: UITableViewController{
         
         // 导航条设置
         self.title = "个人"
-        
+        self.tableView.tableFooterView = UIView()
     }
     
     // Cell的数量
