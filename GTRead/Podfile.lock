@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (5.4.2)
+  - ARVideoKit (1.5.51)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
+  - ARVideoKit (~> 1.5.51)
   - SnapKit (~> 5.0.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - ARVideoKit
     - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
+  ARVideoKit: cd70e1e49e042ed4a88fb59964c17520e34f7f5b
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 36b6f93df95f2d4b92515b5733921550004d9968
+PODFILE CHECKSUM: 4085de4e833c2d76354b3cfc7d44e531435ebb68
 
 COCOAPODS: 1.10.1
