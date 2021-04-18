@@ -7,11 +7,11 @@
 
 import Alamofire
 import CryptoKit
+import SwiftyJSON
 
 
-
-typealias Success = ()->()
-typealias Failure = ()->()
+typealias Success = (_ response: AnyObject) -> Void
+typealias Failure = (_ error: AnyObject) -> Void
 
 // 请求方法
 enum RequestType: Int {
@@ -31,6 +31,13 @@ enum NetworkStatus {
 final class GTNet {
     private init() {}
     static let shared = GTNet()
+    
+    private var sessionManager: Session = {
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = 60
+        let session = Session.init(configuration: configuration, delegate: SessionDelegate.init(), serverTrustManager: nil)
+        return session
+    }()
     
     // 请求基本路径
     let base_url = "http//gtread.com/"
@@ -154,8 +161,69 @@ extension GTNet {
 }
 
 
+
+
 /// 数据请求
 extension GTNet {
+    func requestWith(url: String, httpMethod: RequestType, params: [String: Any]?, success: @escaping Success, error: @escaping Failure) {
+        switch httpMethod {
+        case .get:
+            manageGet(url: url, params: params, success: success, error: error)
+        case .post:
+            managePost(url: url, params: params, success: success, error: error)
+        default:
+            break
+        }
+    }
+    private func manageGet(url: String, params: [String: Any]?, success: @escaping Success, error: @escaping Failure) {
+        AF.request(url, method: .get, parameters: params).response { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                success(json as AnyObject)
+            case .failure:
+                let statusCode = response.response?.statusCode
+                error(statusCode as AnyObject)
+            }
+        }
+    }
+    
+    private func managePost(url: String,
+                            params: [String: Any]?,
+                            success: @escaping Success,
+                            error: @escaping Failure) {
+        AF.request(url, method: .post, parameters: params).response { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                success(json as AnyObject)
+            case .failure:
+                let statusCode = response.response?.statusCode
+                error(statusCode as AnyObject)
+            }
+        }
+    }
+}
+
+extension GTNet {
+    // 登陆请求
+    func loginTest() {
+        let params = ["userId" : 1, "userPwd" : "root"] as [String : Any]
+        self.requestWith(url: "http://121.4.52.206:8000/loginService/loginFun", httpMethod: .get, params: params) { (json) in
+            debugPrint(json)
+        } error: { (error) in
+            debugPrint(error)
+        }
+    }
+    // 书架请求
+
+    // 下载书籍
+
+    // 上传评论
+
+    // 获得评论
+
+    // 测试
     
 }
 

@@ -69,5 +69,10 @@
     <string>Export AR Media</string>
     <key>NSMicrophoneUsageDescription</key>
     <string>Audiovisual Recording</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 </dict>
 </plist>
