@@ -7,8 +7,10 @@
 
 import UIKit
 import PDFKit
+import SceneKit
+import ARKit
 
-class GTReadViewController: GTBaseViewController {
+class GTReadViewController: EyeTrackViewController {
     // pdf路径
     let pdfURL: URL
     
@@ -38,6 +40,16 @@ class GTReadViewController: GTBaseViewController {
         return btn
     }()
     
+    var eyeTrackController: EyeTrackController!
+    var trackView: UIImageView = {
+        let view = UIImageView(frame: CGRect(x: 0, y: 0, width: 75, height: 75))
+        view.contentMode = .scaleAspectFill
+        view.image = UIImage(named: "track_icon")
+        view.isHidden = true
+        return view
+    }()
+    
+    
     // 构造函数
     init(path: URL) {
         pdfURL = path
@@ -66,6 +78,7 @@ class GTReadViewController: GTBaseViewController {
         
         self.view.addSubview(navgationBar)
         self.view.addSubview(pdfView)
+        self.view.addSubview(trackView)
         
         let navHeight = self.navigationController?.navigationBar.frame.height ?? 0
         navgationBar.snp.makeConstraints { (make) in
@@ -84,6 +97,15 @@ class GTReadViewController: GTBaseViewController {
             make.width.height.equalTo(40);
         }
         backButton.addTarget(self, action: #selector(backButtonDidClicked), for: .touchUpInside)
+    
+        self.eyeTrackController = EyeTrackController(device: Device(type: .iPad), smoothingRange: 10, blinkThreshold: .infinity, isHidden: true)
+        self.eyeTrackController.onUpdate = { [weak self] info in
+            self?.trackView.isHidden = false
+            self?.trackView.center = CGPoint(x: info?.centerEyeLookAtPoint.x ?? 0, y: info?.centerEyeLookAtPoint.y ?? 0)
+        }
+        self.initialize(eyeTrack: eyeTrackController.eyeTrack)
+        self.show()
+        self.view.sendSubviewToBack(self.sceneView)
     }
     
     @objc func backButtonDidClicked() {
