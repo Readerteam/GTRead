@@ -176,15 +176,21 @@ extension GTNet {
         }
     }
     private func manageGet(url: String, params: [String: Any]?, success: @escaping Success, error: @escaping Failure) {
-        AF.request(url, method: .get, parameters: params).response { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                success(json as AnyObject)
-            case .failure:
-                let statusCode = response.response?.statusCode
-                error(statusCode as AnyObject)
-            }
+        let urlPath:URL = URL(string: url)!
+        let headers:HTTPHeaders = ["Content-Type":"application/json;charset=utf-8"]
+        let request = AF.request(urlPath,method: .get,parameters: params,encoding: JSONEncoding.default, headers: headers)
+        request.responseJSON { (response) in
+            DispatchQueue.global().async(execute: {
+                DispatchQueue.global().async(execute: {
+                    switch response.result {
+                    case .success(let value):
+                        success(value as AnyObject)
+                    case .failure:
+                        let statusCode = response.response?.statusCode
+                        error(statusCode as AnyObject)
+                    }
+                })
+            })
         }
     }
     
@@ -192,15 +198,19 @@ extension GTNet {
                             params: [String: Any]?,
                             success: @escaping Success,
                             error: @escaping Failure) {
-        AF.request(url, method: .post, parameters: params).response { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                success(json as AnyObject)
-            case .failure:
-                let statusCode = response.response?.statusCode
-                error(statusCode as AnyObject)
-            }
+        let urlPath:URL = URL(string: url)!
+        let headers:HTTPHeaders = ["Content-Type":"application/json;charset=UTF-8"]
+        let request = AF.request(urlPath,method: .post,parameters: params,encoding: JSONEncoding.default, headers: headers)
+        request.responseJSON { (response) in
+            DispatchQueue.global().async(execute: {
+                switch response.result {
+                case .success(let value):
+                    success(value as AnyObject)
+                case .failure:
+                    let statusCode = response.response?.statusCode
+                    error(statusCode as AnyObject)
+                }
+            })
         }
     }
 }
@@ -208,9 +218,12 @@ extension GTNet {
 extension GTNet {
     // 登陆请求
     func loginTest() {
-        let params = ["userId" : 1, "userPwd" : "root"] as [String : Any]
-        self.requestWith(url: "http://121.4.52.206:8000/loginService/loginFun", httpMethod: .get, params: params) { (json) in
+        let params = ["userId" : "1", "userPwd" : "root"] as [String : Any]
+        self.requestWith(url: "http://121.4.52.206:8000/loginService/loginFun", httpMethod: .post, params: params) { (json) in
             debugPrint(json)
+            if let code = json["code"], code as! Int == -1 {
+                debugPrint(code)
+            }
         } error: { (error) in
             debugPrint(error)
         }
