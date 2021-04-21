@@ -16,6 +16,8 @@ class GTReadNavigationView: UIView {
     var thumbEvent: (()->())?   // 缩略图回调事件
     var outlineBtn: UIButton!   // 目录按钮
     var outlineEvent: (()->())? // 目录回调事件
+    var commentBtn: UIButton!   // 评论按钮
+    var commentEvent: (()->())? // 评论回调事件
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -68,7 +70,19 @@ class GTReadNavigationView: UIView {
         outlineBtn.snp.makeConstraints { (make) in
             make.top.bottom.equalToSuperview()
             make.left.equalTo(self.thumbBtn.snp.right).offset(10)
-            make.right.equalToSuperview()
+            make.width.height.equalTo(20)
+        }
+        
+        // 评论
+        commentBtn = UIButton(type: .custom)
+        commentBtn.setImage(UIImage(named: "comment"), for: .normal)
+        commentBtn.backgroundColor = UIColor.clear
+        commentBtn.addTarget(self, action: #selector(commentButtonDidClicked), for: .touchUpInside)
+        toolView.addSubview(commentBtn)
+        commentBtn.snp.makeConstraints { (make) in
+            make.top.bottom.equalToSuperview()
+            make.left.equalTo(self.outlineBtn.snp.right).offset(10)
+            make.right.equalToSuperview().offset(-16)
             make.width.height.equalTo(20)
         }
     }
@@ -90,6 +104,13 @@ class GTReadNavigationView: UIView {
     //MARK: -目录
     @objc private func outlineButtonDidClicked() {
         if let block = outlineEvent {
+            block()
+        }
+    }
+    
+    //MARK: -评论
+    @objc private func commentButtonDidClicked() {
+        if let block = commentEvent {
             block()
         }
     }

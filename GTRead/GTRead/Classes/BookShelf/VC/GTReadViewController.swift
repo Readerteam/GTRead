@@ -118,6 +118,19 @@ class GTReadViewController: EyeTrackViewController {
             }
         }
         
+        navgationBar.commentEvent = { [weak self] in
+            guard let strongSelf = self else {
+                return
+            }
+            
+            let commentVC = GTCommentViewController()
+            strongSelf.addChild(commentVC)
+            strongSelf.view.addSubview(commentVC.view)
+            commentVC.view.snp.makeConstraints { (make) in
+                make.edges.equalToSuperview()
+            }
+        }
+        
         self.view.addSubview(navgationBar)
         navgationBar.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(navgationBarTopMargin)
