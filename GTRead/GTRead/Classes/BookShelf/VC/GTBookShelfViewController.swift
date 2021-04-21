@@ -26,8 +26,6 @@ class GTBookShelfViewController: GTBaseViewController {
         super.viewDidLoad()
 
         self.setupView()
-        
-        GTNet.shared.loginTest()
     }
     
     func setupView() {
