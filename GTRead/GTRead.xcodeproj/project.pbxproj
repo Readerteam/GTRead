@@ -14,6 +14,11 @@
 		AE6DDCD325E12BBF00C0773A /* GTTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCD225E12BBF00C0773A /* GTTabBarViewController.swift */; };
 		AE6DDCE425E12D1900C0773A /* GTBookShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCE325E12D1900C0773A /* GTBookShelfViewController.swift */; };
 		AE6DDCE925E12D2900C0773A /* GTMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCE825E12D2900C0773A /* GTMineViewController.swift */; };
+		AE90032E2630147C00FBD36E /* GTReadNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90032D2630147C00FBD36E /* GTReadNavigationView.swift */; };
+		AE900342263021C000FBD36E /* GTThumbnailGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE900341263021C000FBD36E /* GTThumbnailGridViewController.swift */; };
+		AE90034A2630227700FBD36E /* GTThumbnailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9003492630227700FBD36E /* GTThumbnailCollectionViewCell.swift */; };
+		AE90034F2630273C00FBD36E /* GTOulineTableviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90034E2630273C00FBD36E /* GTOulineTableviewController.swift */; };
+		AE9003542630281200FBD36E /* GTOulineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9003532630281200FBD36E /* GTOulineTableViewCell.swift */; };
 		AE9010CC260B0D3500D5966D /* GTBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9010CB260B0D3500D5966D /* GTBook.swift */; };
 		AEA5B0A2262C14500064D4AE /* EyeTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA5B098262C144F0064D4AE /* EyeTrack.swift */; };
 		AEA5B0A3262C14500064D4AE /* EyeTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA5B099262C144F0064D4AE /* EyeTrackView.swift */; };
@@ -79,6 +84,11 @@
 		AE6DDCD225E12BBF00C0773A /* GTTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTTabBarViewController.swift; sourceTree = "<group>"; };
 		AE6DDCE325E12D1900C0773A /* GTBookShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTBookShelfViewController.swift; sourceTree = "<group>"; };
 		AE6DDCE825E12D2900C0773A /* GTMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTMineViewController.swift; sourceTree = "<group>"; };
+		AE90032D2630147C00FBD36E /* GTReadNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTReadNavigationView.swift; sourceTree = "<group>"; };
+		AE900341263021C000FBD36E /* GTThumbnailGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTThumbnailGridViewController.swift; sourceTree = "<group>"; };
+		AE9003492630227700FBD36E /* GTThumbnailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTThumbnailCollectionViewCell.swift; sourceTree = "<group>"; };
+		AE90034E2630273C00FBD36E /* GTOulineTableviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTOulineTableviewController.swift; sourceTree = "<group>"; };
+		AE9003532630281200FBD36E /* GTOulineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTOulineTableViewCell.swift; sourceTree = "<group>"; };
 		AE9010CB260B0D3500D5966D /* GTBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTBook.swift; sourceTree = "<group>"; };
 		AEA5B098262C144F0064D4AE /* EyeTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyeTrack.swift; sourceTree = "<group>"; };
 		AEA5B099262C144F0064D4AE /* EyeTrackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyeTrackView.swift; sourceTree = "<group>"; };
@@ -202,6 +212,8 @@
 			children = (
 				AE6DDCE325E12D1900C0773A /* GTBookShelfViewController.swift */,
 				AEF2344E260865E600D2B4F8 /* GTReadViewController.swift */,
+				AE900341263021C000FBD36E /* GTThumbnailGridViewController.swift */,
+				AE90034E2630273C00FBD36E /* GTOulineTableviewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -210,6 +222,9 @@
 			isa = PBXGroup;
 			children = (
 				AEF2344926084B2A00D2B4F8 /* GTBookCollectionCell.swift */,
+				AE90032D2630147C00FBD36E /* GTReadNavigationView.swift */,
+				AE9003492630227700FBD36E /* GTThumbnailCollectionViewCell.swift */,
+				AE9003532630281200FBD36E /* GTOulineTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -480,6 +495,7 @@
 				TargetAttributes = {
 					AEE40E4125E0DDAE00C6E7CD = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					AEE40E5725E0DDB100C6E7CD = {
 						CreatedOnToolsVersion = 12.4;
@@ -655,22 +671,27 @@
 				AEA6E60325EE4E2500148B95 /* GTNet.swift in Sources */,
 				AE6DDCCE25E12B8300C0773A /* GTBaseNavigationViewController.swift in Sources */,
 				AEA5B0A5262C14500064D4AE /* EyeTrackController.swift in Sources */,
+				AE90034F2630273C00FBD36E /* GTOulineTableviewController.swift in Sources */,
 				AEA5B0A8262C14500064D4AE /* Face.swift in Sources */,
 				AEE40E9825E120BE00C6E7CD /* AppDelegate.swift in Sources */,
 				AEF2344A26084B2A00D2B4F8 /* GTBookCollectionCell.swift in Sources */,
 				AEA5B0A2262C14500064D4AE /* EyeTrack.swift in Sources */,
+				AE9003542630281200FBD36E /* GTOulineTableViewCell.swift in Sources */,
+				AE90032E2630147C00FBD36E /* GTReadNavigationView.swift in Sources */,
 				AEA5B0A3262C14500064D4AE /* EyeTrackView.swift in Sources */,
 				AECB23992606EE64001B2C84 /* GTBookShelfViewModel.swift in Sources */,
 				D7649CD42622080C00F88F43 /* ChangeSkinViewControllerViewCell.swift in Sources */,
 				AEA5B0A7262C14500064D4AE /* EyeTrackInfo.swift in Sources */,
 				AE9010CC260B0D3500D5966D /* GTBook.swift in Sources */,
 				AE6DDCD325E12BBF00C0773A /* GTTabBarViewController.swift in Sources */,
+				AE900342263021C000FBD36E /* GTThumbnailGridViewController.swift in Sources */,
 				AE6DDCE925E12D2900C0773A /* GTMineViewController.swift in Sources */,
 				AE6DDCC925E12B3400C0773A /* GTBaseViewController.swift in Sources */,
 				AEE40E9925E120BE00C6E7CD /* SceneDelegate.swift in Sources */,
 				D7649CCC2621FE3100F88F43 /* ChangeSkinViewController.swift in Sources */,
 				AEA5B0AA262C14500064D4AE /* EyeTrackViewController.swift in Sources */,
 				AEA5B0A4262C14500064D4AE /* Extension.swift in Sources */,
+				AE90034A2630227700FBD36E /* GTThumbnailCollectionViewCell.swift in Sources */,
 				AEA5B0A6262C14500064D4AE /* Eye.swift in Sources */,
 				AE6DDCE425E12D1900C0773A /* GTBookShelfViewController.swift in Sources */,
 				AEF2344F260865E600D2B4F8 /* GTReadViewController.swift in Sources */,
@@ -853,6 +874,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y2RFU452P5;
 				INFOPLIST_FILE = "$(SRCROOT)/GTRead/Resource/Info.plist";
@@ -863,6 +885,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gtread.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -874,6 +898,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y2RFU452P5;
 				INFOPLIST_FILE = "$(SRCROOT)/GTRead/Resource/Info.plist";
@@ -884,6 +909,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gtread.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
