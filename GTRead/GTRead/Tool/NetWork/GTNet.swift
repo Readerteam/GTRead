@@ -18,6 +18,7 @@ enum RequestType: Int {
     case get
     case post
     case download
+    case arrayPost
 }
 
 // 网络状态
@@ -171,6 +172,8 @@ extension GTNet {
             manageGet(url: url, params: params, success: success, error: error)
         case .post:
             managePost(url: url, params: params, success: success, error: error)
+        case .arrayPost:
+            manageArrayPost(url: url, params: params, success: success, error: error)
         default:
             break
         }
@@ -193,7 +196,7 @@ extension GTNet {
             })
         }
     }
-    
+    // 字典参数 ["id":"1","value":""]
     private func managePost(url: String,
                             params: [String: Any]?,
                             success: @escaping Success,
@@ -213,21 +216,34 @@ extension GTNet {
             })
         }
     }
+    
+    // 数组参数
+    private func manageArrayPost(url: String,
+                                 params: [String: Any]?,
+                                 success: @escaping Success,
+                                 error: @escaping Failure) {
+        let urlPath:URL = URL(string: url)!
+        let data = try? JSONSerialization.data(withJSONObject: params, options: [])
+        var urlRequest = URLRequest(url: urlPath)
+        urlRequest.httpMethod = "POST"
+        urlRequest.httpBody = data
+        urlRequest.allHTTPHeaderFields = ["application/json":"Accept","application/json;charset=UTF-8":"Content-Type"]
+        let request = AF.request(urlRequest)
+        request.responseJSON { (response) in
+            DispatchQueue.global().async(execute: {
+                switch response.result {
+                case .success(let value):
+                    success(value as AnyObject)
+                case .failure:
+                    let statusCode = response.response?.statusCode
+                    error(statusCode as AnyObject)
+                }
+            })
+        }
+    }
 }
 
 extension GTNet {
-    // 登陆请求
-    func loginTest() {
-        let params = ["userId" : "1", "userPwd" : "root"] as [String : Any]
-        self.requestWith(url: "http://121.4.52.206:8000/loginService/loginFun", httpMethod: .post, params: params) { (json) in
-            debugPrint(json)
-            if let code = json["code"], code as! Int == -1 {
-                debugPrint(code)
-            }
-        } error: { (error) in
-            debugPrint(error)
-        }
-    }
     // 书架请求
 
     // 下载书籍
@@ -238,9 +254,19 @@ extension GTNet {
 
     // 测试
     
+    // 视线数据
+    func commitGazeTrackData(starTime: TimeInterval, lists: Array<[String:CGFloat]>, bookId: Int = 1, pageNum: Int = 1) {
+        let date = Date.init()
+        let endTime = date.timeIntervalSince1970
+        let params = ["userId" : "1",  "bookId": bookId, "pageNum": pageNum, "starTime": starTime, "endTime": endTime, "lists" : lists] as [String : Any]
+        self.requestWith(url: "http://www.rownh.top:8000/collectService/collectSightData", httpMethod: .arrayPost, params: params) { (json) in
+            debugPrint(json)
+        } error: { (error) in
+            debugPrint(error)
+        }
+    }
+    
 }
-
-
 
 extension String {
     var MD5: String {

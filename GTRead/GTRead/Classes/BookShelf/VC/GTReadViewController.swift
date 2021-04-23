@@ -11,9 +11,20 @@ import SceneKit
 import ARKit
 
 class GTReadViewController: EyeTrackViewController {
+    
+    //MARK: - 导航条
+    var navgationBar: GTReadNavigationView!
+    
+    //MARK: - 视线相关
+    var eyeTrackController: EyeTrackController!
+//    var points = [CGPoint]()
+    var points = [CGPoint(x: 10, y: 10)]
+    var trackView: UIImageView!
+    
     //MARK: -PDF 相关
     private var pdfdocument: PDFDocument?
     let pdfURL: URL // pdf路径
+    var currentDate: TimeInterval = 0
     // pdf视图
     lazy var pdfView: PDFView = {
         let pdfView = PDFView()
@@ -23,24 +34,6 @@ class GTReadViewController: EyeTrackViewController {
         pdfView.usePageViewController(true, withViewOptions: [UIPageViewController.OptionsKey.interPageSpacing: 20])
         return pdfView
     }()
-    
-    // 导航条
-    lazy var navgationBar: GTReadNavigationView = {
-        let view = GTReadNavigationView()
-        view.backgroundColor = UIColor.white
-        return view
-    }()
-    var navgationBarTopMargin = -70
-    
-    var eyeTrackController: EyeTrackController!
-    var trackView: UIImageView = {
-        let view = UIImageView(frame: CGRect(x: 0, y: 0, width: 75, height: 75))
-        view.contentMode = .scaleAspectFill
-        view.image = UIImage(named: "track_icon")
-        view.isHidden = true
-        return view
-    }()
-    
     
     // 构造函数
     init(path: URL) {
@@ -57,13 +50,6 @@ class GTReadViewController: EyeTrackViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
-        let document = PDFDocument(url: pdfURL)
-        pdfView.document = document
-        self.pdfdocument = document
-        let page = document?.page(at: GTBook.shared.getCacheData())
-        if let lastPage = page {
-            pdfView.go(to: lastPage)
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,14 +63,52 @@ class GTReadViewController: EyeTrackViewController {
     }
     
     func setupView() {
+        // 导航条
+        self.navigation()
+        self.view.addSubview(navgationBar)
+        navgationBar.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(0)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(20)
+        }
         
+        // 视线
+        self.gateTrackView()
+        
+        // pdf
+        self.view.addSubview(pdfView)
+        pdfView.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(20)
+            make.left.right.bottom.equalToSuperview()
+        }
+        let tap = UITapGestureRecognizer(target: self, action: #selector(pdfViewTapEvent))
+        pdfView.addGestureRecognizer(tap)
+        let document = PDFDocument(url: pdfURL)
+        pdfView.document = document
+        self.pdfdocument = document
+        // 读取上一次阅读的页数缓存
+        
+        let page = document?.page(at: GTBook.shared.getCacheData())
+        if let lastPage = page {
+            pdfView.go(to: lastPage)
+        }
+        let date = Date.init()
+        currentDate = date.timeIntervalSince1970
+
+        NotificationCenter.default.addObserver(self,selector: #selector(handlePageChange(notification:)), name: Notification.Name.PDFViewPageChanged, object: nil)
+        self.view.bringSubviewToFront(navgationBar)
+        self.view.bringSubviewToFront(trackView)
+    }
+    
+    private func navigation() {
+        navgationBar = GTReadNavigationView()
+        navgationBar.backgroundColor = UIColor.white
         navgationBar.backEvent = { [weak self] in
             GTBook.shared.cacheData()
             // 退出
             self?.navigationController?.setNavigationBarHidden(false, animated: false)
             self?.navigationController?.popViewController(animated: true)
         }
-        
         navgationBar.thumbEvent = { [weak self] in
             guard let strongSelf = self else {
                 return
@@ -104,7 +128,6 @@ class GTReadViewController: EyeTrackViewController {
             thumbnailGridViewController.delegate = strongSelf
             strongSelf.navigationController?.pushViewController(thumbnailGridViewController, animated: true)
         }
-        
         navgationBar.outlineEvent = { [weak self] in
             guard let strongSelf = self else {
                 return
@@ -117,7 +140,6 @@ class GTReadViewController: EyeTrackViewController {
                 strongSelf.navigationController?.pushViewController(oulineViewController, animated: true)
             }
         }
-        
         navgationBar.commentEvent = { [weak self] in
             guard let strongSelf = self else {
                 return
@@ -130,50 +152,45 @@ class GTReadViewController: EyeTrackViewController {
                 make.edges.equalToSuperview()
             }
         }
-        
-        self.view.addSubview(navgationBar)
-        navgationBar.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(navgationBarTopMargin)
-            make.left.right.equalToSuperview()
-            make.height.equalTo(50)
-        }
-        
-        self.view.addSubview(pdfView)
+    }
+    
+    private func gateTrackView(){
+        trackView = UIImageView(frame: CGRect(x: 0, y: 0, width: 75, height: 75))
+        trackView.contentMode = .scaleAspectFill
+        trackView.image = UIImage(named: "track_icon")
+        trackView.isHidden = true
         self.view.addSubview(trackView)
-        pdfView.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(20)
-            make.left.right.bottom.equalToSuperview()
-        }
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(pdfViewTapEvent))
-        pdfView.addGestureRecognizer(tap)
-        
-        self.view.bringSubviewToFront(navgationBar)
         self.eyeTrackController = EyeTrackController(device: Device(type: .iPad), smoothingRange: 10, blinkThreshold: .infinity, isHidden: true)
         self.eyeTrackController.onUpdate = { [weak self] info in
             self?.trackView.isHidden = false
-            self?.trackView.center = CGPoint(x: info?.centerEyeLookAtPoint.x ?? 0, y: info?.centerEyeLookAtPoint.y ?? 0)
+            let point = CGPoint(x: info?.centerEyeLookAtPoint.x ?? 0, y: info?.centerEyeLookAtPoint.y ?? 0)
+            self?.trackView.center = point
+            self?.points.append(point)
         }
         self.initialize(eyeTrack: eyeTrackController.eyeTrack)
         self.show()
-        self.view.sendSubviewToBack(self.sceneView)
     }
     
-    
-    
     @objc private func pdfViewTapEvent() {
-        /// 告诉self.view约束需要更新
-        self.view.needsUpdateConstraints()
-        /// 调用此方法告诉self.view检测是否需要更新约束，若需要则更新，下面添加动画效果才起作用
-        self.view.updateConstraintsIfNeeded()
-        /// 更新动画
-        self.navgationBarTopMargin =  self.navgationBarTopMargin > 0 ? -70 : 20
-        UIView.animate(withDuration: 0.5, animations: {
-            self.view.layoutIfNeeded()
-            self.navgationBar.snp.updateConstraints { (make) in
-                make.top.equalToSuperview().offset(self.navgationBarTopMargin)
+        navgationBar.heightAnimation()
+    }
+    
+    @objc private func handlePageChange(notification: Notification){
+        if self.points.count > 0 {
+            var temp = Array<[String:CGFloat]>()
+            let width = UIScreen.main.bounds.width
+            let height = UIScreen.main.bounds.height
+            for point in self.points {
+                if point.x < width, point.x > 0, point.y > 0, point.y < height {
+                    let dict = ["cx": point.x, "cy": point.y]
+                    temp.append(dict)
+                }
             }
-        })
+            if temp.count > 0 {
+                GTNet.shared.commitGazeTrackData(starTime: currentDate, lists: temp)
+            }
+            self.points.removeAll()
+        }
     }
 }
 
