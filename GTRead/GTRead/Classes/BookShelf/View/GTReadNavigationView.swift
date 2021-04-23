@@ -19,7 +19,7 @@ class GTReadNavigationView: UIView {
     var commentBtn: UIButton!   // 评论按钮
     var commentEvent: (()->())? // 评论回调事件
     var centerYMargin = 20
-    var height = 70
+    var height = 20
     
     override init(frame: CGRect) {
         super.init(frame: frame)

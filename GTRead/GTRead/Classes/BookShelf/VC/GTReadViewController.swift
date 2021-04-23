@@ -176,21 +176,17 @@ class GTReadViewController: EyeTrackViewController {
     }
     
     @objc private func handlePageChange(notification: Notification){
-        if self.points.count > 0 {
-            var temp = Array<[String:CGFloat]>()
-            let width = UIScreen.main.bounds.width
-            let height = UIScreen.main.bounds.height
-            for point in self.points {
-                if point.x < width, point.x > 0, point.y > 0, point.y < height {
-                    let dict = ["cx": point.x, "cy": point.y]
-                    temp.append(dict)
-                }
+        var temp = Array<[String:CGFloat]>()
+        let width = UIScreen.main.bounds.width
+        let height = UIScreen.main.bounds.height
+        for point in self.points {
+            if point.x < width, point.x > 0, point.y > 0, point.y < height {
+                let dict = ["cx": point.x, "cy": point.y]
+                temp.append(dict)
             }
-            if temp.count > 0 {
-                GTNet.shared.commitGazeTrackData(starTime: currentDate, lists: temp)
-            }
-            self.points.removeAll()
         }
+        GTNet.shared.commitGazeTrackData(starTime: currentDate, lists: temp)
+        self.points.removeAll()
     }
 }
 
