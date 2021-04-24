@@ -18,10 +18,13 @@ class GTTabBarViewController: UITabBarController {
     func createControllers() {
         
         self.tabBar.tintColor = UIColor.black
+        
         // 书架
         let bookNav = GTBaseNavigationViewController(rootViewController: GTBookShelfViewController())
         let bookItem = UITabBarItem(title: "书架", image: UIImage(named: "shelf"), selectedImage: UIImage(named: "shelf_selected"))
         bookNav.tabBarItem = bookItem
+        
+        
         
         // 个人
         let mineNav = GTBaseNavigationViewController(rootViewController: GTMineViewController())

@@ -47,6 +47,7 @@
 		AEE40EA725E120D900C6E7CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE40EA225E120D900C6E7CD /* Main.storyboard */; };
 		AEF2344A26084B2A00D2B4F8 /* GTBookCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF2344926084B2A00D2B4F8 /* GTBookCollectionCell.swift */; };
 		AEF2344F260865E600D2B4F8 /* GTReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF2344E260865E600D2B4F8 /* GTReadViewController.swift */; };
+		D737140226343D36002DD3DD /* GTAnalyseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D737140126343D36002DD3DD /* GTAnalyseView.swift */; };
 		D7649CC0262189EF00F88F43 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7649CBF262189EF00F88F43 /* CustomTableViewCell.swift */; };
 		D7649CC62621AA4C00F88F43 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7649CC52621AA4C00F88F43 /* LoginViewController.swift */; };
 		D7649CCC2621FE3100F88F43 /* ChangeSkinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7649CCB2621FE3100F88F43 /* ChangeSkinViewController.swift */; };
@@ -125,6 +126,7 @@
 		AEE40EA425E120D900C6E7CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEF2344926084B2A00D2B4F8 /* GTBookCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTBookCollectionCell.swift; sourceTree = "<group>"; };
 		AEF2344E260865E600D2B4F8 /* GTReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTReadViewController.swift; sourceTree = "<group>"; };
+		D737140126343D36002DD3DD /* GTAnalyseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTAnalyseView.swift; sourceTree = "<group>"; };
 		D7649CBF262189EF00F88F43 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		D7649CC52621AA4C00F88F43 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D7649CCB2621FE3100F88F43 /* ChangeSkinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSkinViewController.swift; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 		AEE40E9D25E120C800C6E7CD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D737140026343D36002DD3DD /* Analyse */,
 				AE6DDAE625E1287B00C0773A /* BookShelf */,
 				AE6DDCC625E12ADB00C0773A /* Mine */,
 			);
@@ -396,6 +399,14 @@
 			name = TabBar;
 			path = GTRead/TabBar;
 			sourceTree = SOURCE_ROOT;
+		};
+		D737140026343D36002DD3DD /* Analyse */ = {
+			isa = PBXGroup;
+			children = (
+				D737140126343D36002DD3DD /* GTAnalyseView.swift */,
+			);
+			path = Analyse;
+			sourceTree = "<group>";
 		};
 		D7649CC42621A9C300F88F43 /* LoginAndRegister */ = {
 			isa = PBXGroup;
@@ -682,6 +693,7 @@
 				AEA5B0A8262C14500064D4AE /* Face.swift in Sources */,
 				AEE40E9825E120BE00C6E7CD /* AppDelegate.swift in Sources */,
 				AEF2344A26084B2A00D2B4F8 /* GTBookCollectionCell.swift in Sources */,
+				D737140226343D36002DD3DD /* GTAnalyseView.swift in Sources */,
 				AEA5B0A2262C14500064D4AE /* EyeTrack.swift in Sources */,
 				AE9003542630281200FBD36E /* GTOulineTableViewCell.swift in Sources */,
 				AE90032E2630147C00FBD36E /* GTReadNavigationView.swift in Sources */,
