@@ -4,6 +4,9 @@ PODS:
   - Charts (3.6.0):
     - Charts/Core (= 3.6.0)
   - Charts/Core (3.6.0)
+  - SDWebImage (5.11.0):
+    - SDWebImage/Core (= 5.11.0)
+  - SDWebImage/Core (5.11.0)
   - SnapKit (5.0.1)
   - SwiftyJSON (4.3.0)
 
@@ -11,6 +14,7 @@ DEPENDENCIES:
   - Alamofire (~> 5.2)
   - ARVideoKit (~> 1.5.51)
   - Charts
+  - SDWebImage (~> 5.0)
   - SnapKit (~> 5.0.0)
   - SwiftyJSON (~> 4.0)
 
@@ -19,6 +23,7 @@ SPEC REPOS:
     - Alamofire
     - ARVideoKit
     - Charts
+    - SDWebImage
     - SnapKit
     - SwiftyJSON
 
@@ -26,9 +31,10 @@ SPEC CHECKSUMS:
   Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
   ARVideoKit: cd70e1e49e042ed4a88fb59964c17520e34f7f5b
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  SDWebImage: 7acbb57630ac7db4a495547fb73916ff3e432f6b
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 284ecccdba3fd381562c8707e79b65c9452746fd
+PODFILE CHECKSUM: f7098f8a645e22998111acd28c06aa5f1c11d128
 
 COCOAPODS: 1.10.0

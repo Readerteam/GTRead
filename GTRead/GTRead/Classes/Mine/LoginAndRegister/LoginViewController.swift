@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import SwiftUI
 
 class LoginViewController: GTBaseViewController, UITextFieldDelegate {
     
     // 忘记密码、注册账号、登录按钮
     var forgetPassword: UIButton!
-    var registerAccount: UIButton!
+    var registerAccountBtn: UIButton!
     var loginBtn: UIButton!
     
     //用户密码输入框
@@ -118,10 +119,10 @@ class LoginViewController: GTBaseViewController, UITextFieldDelegate {
         self.view.addSubview(forgetPassword)
         
         // 注册账号
-        registerAccount = UIButton(frame:CGRect(x: 45 + txtUser.frame.size.width - 80, y: 400, width: 80, height: 40))
-        registerAccount.setTitle("注册账号", for: .normal)
-        registerAccount.setTitleColor(UIColor.red, for: .normal)
-        self.view.addSubview(registerAccount)
+        registerAccountBtn = UIButton(frame:CGRect(x: 45 + txtUser.frame.size.width - 80, y: 400, width: 80, height: 40))
+        registerAccountBtn.setTitle("注册账号", for: .normal)
+        registerAccountBtn.setTitleColor(UIColor.red, for: .normal)
+        self.view.addSubview(registerAccountBtn)
         
         // 登录按钮
         loginBtn = UIButton(frame:CGRect(x: 45, y: 480, width: vLogin.frame.size.width - 60, height: 60))
@@ -130,6 +131,57 @@ class LoginViewController: GTBaseViewController, UITextFieldDelegate {
         loginBtn.backgroundColor = UIColor.systemBlue
         self.view.addSubview(loginBtn)
         
+        // 登录按钮点击事件
+        loginBtn.addTarget(self, action: #selector(loginAccount), for: .touchUpInside)
+        
+        // 注册按钮事件
+        registerAccountBtn.addTarget(self, action: #selector(registerAccount), for: .touchUpInside)
+    }
+    
+    // 登录账户
+    @IBAction func loginAccount() {
+        let params = ["userId" : txtUser.text ?? "", "userPwd" : txtPwd.text ?? ""] as [String : Any]
+        GTNet.shared.requestWith(url:"http://121.4.52.206:8000/loginService/loginFun", httpMethod: .post,params: params) {(json) in
+            debugPrint(json)
+            if let code = json["code"], code as! Int == 1 {
+                debugPrint(code)
+                
+                UserDefaultKeys.LoginStatus.isLogin = true
+                
+                // 登录成功，切换至个人主页
+                DispatchQueue.main.async {
+                    UserDefaultKeys.AccountInfo.account = self.txtUser.text ?? ""
+                    UserDefaultKeys.AccountInfo.password = self.txtPwd.text ?? ""
+                    self.navigationController?.popToRootViewController(animated:true)
+                    NotificationCenter.default.post(name:NSNotification.Name(rawValue:"LoginSuccessfulNotification"), object: self)
+                }
+                
+            } else {
+                
+                // 登录失败
+                let errorInfo = json["errorRes"]
+                let p = UIAlertController(title: "登录失败", message: errorInfo as?String, preferredStyle: .alert)
+                p.addAction(UIAlertAction(title: "OK", style: .default, handler:{(act:UIAlertAction)in self.txtPwd.text=""}))
+                DispatchQueue.main.async {
+                    self.present(p,animated: true,completion: nil)
+                }
+            }
+        } error: { (error) in
+            debugPrint(error)
+        }
+    }
+    
+    // 注册账户
+    @IBAction func registerAccount() {
+        DispatchQueue.main.async {
+            NotificationCenter.default.addObserver(self, selector: #selector(self.toLoginView), name:NSNotification.Name(rawValue:"RegisterSuccessfulNotification"), object: nil)
+        }
+        self.navigationController?.pushViewController(UIHostingController(rootView: RegisterAccountView()), animated: true)
+    }
+    
+    // 从注册页面跳转到登录页面
+    @IBAction func toLoginView() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     //输入框获取焦点开始编辑
