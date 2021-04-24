@@ -8,7 +8,7 @@
 import SwiftUI
 import Charts
 
-struct SwiftUIView: View {
+struct GTAnalyseView: View {
     var body: some View {
         VStack(spacing: 30.0) {
             VStack(alignment: .center, spacing: 20.0) {
@@ -158,6 +158,6 @@ struct LineChart : UIViewRepresentable {
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftUIView()
+        GTAnalyseView()
     }
 }

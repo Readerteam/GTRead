@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class GTTabBarViewController: UITabBarController {
 
@@ -24,14 +25,17 @@ class GTTabBarViewController: UITabBarController {
         let bookItem = UITabBarItem(title: "书架", image: UIImage(named: "shelf"), selectedImage: UIImage(named: "shelf_selected"))
         bookNav.tabBarItem = bookItem
         
-        
+        // 分析
+        let analyseNav = GTBaseNavigationViewController(rootViewController: UIHostingController(rootView: GTAnalyseView()))
+        let analyseItem = UITabBarItem(title: "分析", image: UIImage(named: "analyse"), selectedImage: UIImage(named: "analyse_selected"))
+        analyseNav.tabBarItem = analyseItem
         
         // 个人
         let mineNav = GTBaseNavigationViewController(rootViewController: GTMineViewController())
         let mineItem = UITabBarItem(title: "个人", image: UIImage(named: "mine"), selectedImage: UIImage(named: "mine_selected"))
         mineNav.tabBarItem = mineItem
         
-        self.viewControllers = [bookNav, mineNav]
+        self.viewControllers = [bookNav, analyseNav, mineNav]
     }
 }
 
