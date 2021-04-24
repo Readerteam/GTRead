@@ -7,7 +7,6 @@
 
 import Alamofire
 import CryptoKit
-import SwiftyJSON
 
 
 typealias Success = (_ response: AnyObject) -> Void
@@ -202,7 +201,7 @@ extension GTNet {
         let headers:HTTPHeaders = ["Content-Type":"application/json;charset=UTF-8"]
         let request = AF.request(urlPath,method: .post,parameters: params,encoding: JSONEncoding.default, headers: headers)
         request.responseJSON { (response) in
-            DispatchQueue.global().async(execute: {
+            DispatchQueue.main.async(execute: {
                 switch response.result {
                 case .success(let value):
                     success(value as AnyObject)
@@ -223,7 +222,13 @@ extension GTNet {
     // 上传评论
 
     // 获得评论
-    func getCommentList() {
+    func getCommentList(success: @escaping ((AnyObject)->()),error: @escaping ((AnyObject)->()),bookId: Int = 1, pageNum: Int = 1) {
+        let params = ["userId" : "3",  "bookId": bookId, "pageNum": pageNum] as [String : Any]
+        self.requestWith(url: "http://www.rownh.top:8001/personalService/getComment", httpMethod: .post, params: params) { (json) in
+            success(json)
+        } error: { (error) in
+            success(error)
+        }
         
     }
 

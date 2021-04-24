@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E94E694AD967475FB6262D8 /* Pods_GTRead_GTReadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCF3F60C55F91B4E58ED9B3 /* Pods_GTRead_GTReadUITests.framework */; };
 		7A9998051B8863AA528DED3E /* Pods_GTRead.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7736EBA3C55BCE74C1F239F7 /* Pods_GTRead.framework */; };
+		AE0B16EE2632BEF100D4FF89 /* GTCommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0B16ED2632BEF100D4FF89 /* GTCommentModel.swift */; };
 		AE6DDCC925E12B3400C0773A /* GTBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCC825E12B3400C0773A /* GTBaseViewController.swift */; };
 		AE6DDCCE25E12B8300C0773A /* GTBaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCCD25E12B8300C0773A /* GTBaseNavigationViewController.swift */; };
 		AE6DDCD325E12BBF00C0773A /* GTTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCD225E12BBF00C0773A /* GTTabBarViewController.swift */; };
@@ -81,6 +82,7 @@
 		9479237C85C60CBB3EB75964 /* Pods-GTRead-GTReadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTRead-GTReadUITests.release.xcconfig"; path = "Target Support Files/Pods-GTRead-GTReadUITests/Pods-GTRead-GTReadUITests.release.xcconfig"; sourceTree = "<group>"; };
 		94CB0EA52D5D83DA63E9853B /* Pods-GTRead.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTRead.debug.xcconfig"; path = "Target Support Files/Pods-GTRead/Pods-GTRead.debug.xcconfig"; sourceTree = "<group>"; };
 		970A0AF2392A8CD611363A14 /* Pods-GTReadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTReadTests.debug.xcconfig"; path = "Target Support Files/Pods-GTReadTests/Pods-GTReadTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AE0B16ED2632BEF100D4FF89 /* GTCommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTCommentModel.swift; sourceTree = "<group>"; };
 		AE6DDCC825E12B3400C0773A /* GTBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTBaseViewController.swift; sourceTree = "<group>"; };
 		AE6DDCCD25E12B8300C0773A /* GTBaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTBaseNavigationViewController.swift; sourceTree = "<group>"; };
 		AE6DDCD225E12BBF00C0773A /* GTTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTTabBarViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 		AEA2B3422606E853009090B7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AE0B16ED2632BEF100D4FF89 /* GTCommentModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 				AEA6E60325EE4E2500148B95 /* GTNet.swift in Sources */,
 				AE6DDCCE25E12B8300C0773A /* GTBaseNavigationViewController.swift in Sources */,
 				AEA5B0A5262C14500064D4AE /* EyeTrackController.swift in Sources */,
+				AE0B16EE2632BEF100D4FF89 /* GTCommentModel.swift in Sources */,
 				AE90034F2630273C00FBD36E /* GTOulineTableviewController.swift in Sources */,
 				AE9003592630396300FBD36E /* GTCommentViewController.swift in Sources */,
 				AEA5B0A8262C14500064D4AE /* Face.swift in Sources */,
