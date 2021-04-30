@@ -31,7 +31,7 @@ class GTTabBarViewController: UITabBarController {
         analyseNav.tabBarItem = analyseItem
         
         // 个人
-        let mineNav = GTBaseNavigationViewController(rootViewController: GTMineViewController())
+        let mineNav = GTBaseNavigationViewController(rootViewController: UIHostingController(rootView: GTMineView()))
         let mineItem = UITabBarItem(title: "个人", image: UIImage(named: "mine"), selectedImage: UIImage(named: "mine_selected"))
         mineNav.tabBarItem = mineItem
         

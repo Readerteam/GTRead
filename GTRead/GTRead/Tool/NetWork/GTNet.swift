@@ -216,6 +216,25 @@ extension GTNet {
 }
 
 extension GTNet {
+    
+    // 个人信息请求
+    @objc func requestAccountInfo() {
+        let params = ["userId" : UserDefaultKeys.AccountInfo.account] as [String : Any]
+        
+        GTNet.shared.requestWith(url: "http://121.4.52.206:8000/loginService/userInfoFun", httpMethod: .post, params: params) { (json) in
+            debugPrint(json)
+            
+            UserDefaultKeys.AccountInfo.imageUrl = json["headImgUrl"] as! String
+            UserDefaultKeys.AccountInfo.userName = json["nickName"] as! String
+            
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: NSNotification.Name(LoginSuccessfulNotification.rawValue), object: self)
+            }
+        } error: { (error) in
+            debugPrint(error)
+        }
+    }
+    
     // 书架请求
 
     // 下载书籍

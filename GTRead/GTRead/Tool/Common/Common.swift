@@ -17,9 +17,10 @@ let RegisterSuccessfulNotification = Notification.Name(rawValue: "RegisterSucces
 struct UserDefaultKeys {
     // 账户信息
     struct AccountInfo {
-        static var userName = ""
+        static var userName = "Login"
         static var password = ""
         static var account = ""
+        static var imageUrl = ""
     }
     
     // 登录状态

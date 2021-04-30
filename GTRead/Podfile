@@ -12,6 +12,7 @@ target 'GTRead' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'SDWebImage', '~> 5.0'
   pod 'Charts'
+  pod 'SDWebImageSwiftUI'
 
   target 'GTReadTests' do
     inherit! :search_paths

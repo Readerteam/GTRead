@@ -7,6 +7,8 @@ PODS:
   - SDWebImage (5.11.0):
     - SDWebImage/Core (= 5.11.0)
   - SDWebImage/Core (5.11.0)
+  - SDWebImageSwiftUI (2.0.2):
+    - SDWebImage (~> 5.10)
   - SnapKit (5.0.1)
   - SwiftyJSON (4.3.0)
 
@@ -15,6 +17,7 @@ DEPENDENCIES:
   - ARVideoKit (~> 1.5.51)
   - Charts
   - SDWebImage (~> 5.0)
+  - SDWebImageSwiftUI
   - SnapKit (~> 5.0.0)
   - SwiftyJSON (~> 4.0)
 
@@ -24,6 +27,7 @@ SPEC REPOS:
     - ARVideoKit
     - Charts
     - SDWebImage
+    - SDWebImageSwiftUI
     - SnapKit
     - SwiftyJSON
 
@@ -32,9 +36,10 @@ SPEC CHECKSUMS:
   ARVideoKit: cd70e1e49e042ed4a88fb59964c17520e34f7f5b
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   SDWebImage: 7acbb57630ac7db4a495547fb73916ff3e432f6b
+  SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: f7098f8a645e22998111acd28c06aa5f1c11d128
+PODFILE CHECKSUM: 49938229dfed58f72bc8fbde9349d47c6054fe8d
 
 COCOAPODS: 1.10.0

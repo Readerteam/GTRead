@@ -16,9 +16,15 @@ struct RegisterAccountView: View {
     @State var password1HintInfo: String = ""
     @State var password2HintInfo: String = ""
     
+    @Binding var isPresented: Bool
+    @Binding var isPushed: Bool
+    
     var body: some View {
-        VStack(spacing: 50.0) {
-            Image("profile")
+        VStack(spacing: 30.0) {
+            Image("register")
+                .resizable()
+                .frame(width: 500.0, height: 500.0)
+                .scaledToFill()
             
             VStack(alignment: .leading) {
                 HStack {
@@ -33,7 +39,7 @@ struct RegisterAccountView: View {
                 .padding(.horizontal, 30.0)
                 .frame(height: 80)
                 .cornerRadius(20)
-                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                .border(Color.black, width: 1)
                 
                 Text(accountHintInfo)
                     .foregroundColor(.red)
@@ -49,7 +55,7 @@ struct RegisterAccountView: View {
                 }
                 .padding(.horizontal, 30.0)
                 .frame(height: 80)
-                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                .border(Color.black, width: 1)
                 
                 Text(password1HintInfo)
                     .foregroundColor(.red)
@@ -65,28 +71,26 @@ struct RegisterAccountView: View {
                 }
                 .padding(.horizontal, 30.0)
                 .frame(height: 80)
-                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                .border(Color.black, width: 1)
                 
                 Text(password2HintInfo)
                     .foregroundColor(.red)
             }
 
-            Button(action: hello) {
+            Button(action: registerRequest) {
                 Text("确认")
             }
-            .frame(width: 300, height: 60.0)
+            .frame(width: 300, height: 100.0)
             .background(Color.blue)
             .foregroundColor(.white)
             .cornerRadius(20)
-            
-            Spacer()
+
         }
         .padding(.horizontal, 40.0)
-        .padding(.top, 200.0)
         
     }
   
-    func hello() {
+    func registerRequest() {
         
         if password1.isEmpty || password2.isEmpty || account.isEmpty {
             if password1.isEmpty {
@@ -106,8 +110,15 @@ struct RegisterAccountView: View {
                 debugPrint(json)
                 if let code = json["code"], code as! Int == 1 {
                     debugPrint(code)
+                    
+                    isPushed = false
+                    isPresented = false
+
+                    UserDefaultKeys.AccountInfo.account = account
+                    UserDefaultKeys.LoginStatus.isLogin = true
+                    
                     DispatchQueue.main.async {
-                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "RegisterSuccessfulNotification"), object: self)
+                        GTNet.shared.requestAccountInfo()
                     }
                     
                 } else {
@@ -120,8 +131,8 @@ struct RegisterAccountView: View {
     }
 }
 
-struct RegisterAccountView_Previews: PreviewProvider {
-    static var previews: some View {
-        RegisterAccountView()
-    }
-}
+//struct RegisterAccountView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RegisterAccountView()
+//    }
+//}
