@@ -13,10 +13,6 @@ class GTCommentViewCell: UITableViewCell {
     var contentLabel: UILabel!
     var tableView: UITableView!
     var itemModel: GTCommentItem?
-    var cellIndex: Int = -1
-    var clickedStatus: Bool = false
-    var buttonEvent: ((Int)->())?
-    var unfoldBtn: UIButton!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -41,16 +37,9 @@ class GTCommentViewCell: UITableViewCell {
         }
         
         tableView = UITableView(frame: CGRect.zero, style: .plain)
-        tableView.register(GTCommentViewCell.self, forCellReuseIdentifier: "GTCommentViewCell")
+        tableView.register(GTCommentViewCell.self, forCellReuseIdentifier: "GTSubCommentViewCell")
         tableView.delegate = self
         tableView.dataSource = self
-        let btn = UIButton(type: .custom)
-        btn.frame = CGRect(x: 0, y: 0, width: 40, height: 20)
-        btn.setTitle("查看全部", for: .normal)
-        btn.setTitleColor(UIColor.black, for: .normal)
-        btn.addTarget(self, action: #selector(allButtonDidClicked), for: .touchUpInside)
-        unfoldBtn = btn
-        tableView.tableFooterView = btn
         contentView.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.top.equalTo(20)
@@ -69,13 +58,6 @@ class GTCommentViewCell: UITableViewCell {
         userLabel.text = model.author?["userId"]
         contentLabel.text = model.commentContent
     }
-    
-    @objc private func allButtonDidClicked() {
-        self.clickedStatus = true
-        self.tableView.tableFooterView = UIView()
-        self.tableView.reloadData()
-        buttonEvent?(cellIndex)
-    }
 }
 
 extension GTCommentViewCell : UITableViewDelegate,UITableViewDataSource {
@@ -88,20 +70,11 @@ extension GTCommentViewCell : UITableViewDelegate,UITableViewDataSource {
         guard let childCount = itemModel?.childCnt else {
             return 0
         }
-        if !clickedStatus {
-            if childCount <= maxCount {
-                return childCount
-            }else{
-                return maxCount;
-            }
-        }else{
-            return childCount
-        }
-        
+        return childCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GTCommentViewCell", for: indexPath) as! GTCommentViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GTSubCommentViewCell", for: indexPath) as! GTCommentViewCell
         if itemModel?.childComments?.count ?? 0 > indexPath.row {
             guard let childList = itemModel?.childComments else {
                 return cell

@@ -173,16 +173,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AE6DDAE625E1287B00C0773A /* BookShelf */ = {
+		AE30950B263FEA4A0090F685 /* Shelf */ = {
 			isa = PBXGroup;
 			children = (
-				AECB25872606F2A4001B2C84 /* PDF */,
+				AE30950D263FEA8A0090F685 /* Model */,
+				AE30950C263FEA770090F685 /* View */,
+				AEA2B3452606E854009090B7 /* ViewModel */,
+				AE30950E263FEA930090F685 /* VC */,
+			);
+			path = Shelf;
+			sourceTree = "<group>";
+		};
+		AE30950C263FEA770090F685 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AEF2344926084B2A00D2B4F8 /* GTBookCollectionCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AE30950D263FEA8A0090F685 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE30950E263FEA930090F685 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				AE6DDCE325E12D1900C0773A /* GTBookShelfViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		AE6DDAE625E1287B00C0773A /* Read */ = {
+			isa = PBXGroup;
+			children = (
+				AE30950B263FEA4A0090F685 /* Shelf */,
+				AECB25872606F2A4001B2C84 /* PDFResource */,
 				AEA2B3422606E853009090B7 /* Model */,
 				AEA2B3442606E854009090B7 /* View */,
-				AEA2B3452606E854009090B7 /* ViewModel */,
 				AEA2B3432606E854009090B7 /* VC */,
 			);
-			path = BookShelf;
+			path = Read;
 			sourceTree = "<group>";
 		};
 		AE6DDCC625E12ADB00C0773A /* Mine */ = {
@@ -199,6 +233,7 @@
 		AE6DDCC725E12B1100C0773A /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
+				AE6DDCD225E12BBF00C0773A /* GTTabBarViewController.swift */,
 				AE6DDCC825E12B3400C0773A /* GTBaseViewController.swift */,
 				AE6DDCCD25E12B8300C0773A /* GTBaseNavigationViewController.swift */,
 			);
@@ -217,7 +252,6 @@
 		AEA2B3432606E854009090B7 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				AE6DDCE325E12D1900C0773A /* GTBookShelfViewController.swift */,
 				AEF2344E260865E600D2B4F8 /* GTReadViewController.swift */,
 				AE900341263021C000FBD36E /* GTThumbnailGridViewController.swift */,
 				AE90034E2630273C00FBD36E /* GTOulineTableviewController.swift */,
@@ -229,7 +263,6 @@
 		AEA2B3442606E854009090B7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AEF2344926084B2A00D2B4F8 /* GTBookCollectionCell.swift */,
 				AE90032D2630147C00FBD36E /* GTReadNavigationView.swift */,
 				AE9003492630227700FBD36E /* GTThumbnailCollectionViewCell.swift */,
 				AE9003532630281200FBD36E /* GTOulineTableViewCell.swift */,
@@ -286,7 +319,7 @@
 			path = GTBook;
 			sourceTree = "<group>";
 		};
-		AECB25872606F2A4001B2C84 /* PDF */ = {
+		AECB25872606F2A4001B2C84 /* PDFResource */ = {
 			isa = PBXGroup;
 			children = (
 				AECB25882606F2C0001B2C84 /* 0.pdf */,
@@ -295,7 +328,7 @@
 				AECB25972606F2FB001B2C84 /* 3.pdf */,
 				AECB259C2606F308001B2C84 /* 4.pdf */,
 			);
-			path = PDF;
+			path = PDFResource;
 			sourceTree = "<group>";
 		};
 		AEE40E3925E0DDAE00C6E7CD = {
@@ -325,7 +358,6 @@
 			children = (
 				AEA5B097262C144F0064D4AE /* EyeTrackKit */,
 				AEE40E9525E120BE00C6E7CD /* Application */,
-				AEF8284625E12EA000A28C0E /* TabBar */,
 				AE6DDCC725E12B1100C0773A /* BaseViewController */,
 				AEE40E9D25E120C800C6E7CD /* Classes */,
 				AEE40E9E25E120D900C6E7CD /* Resource */,
@@ -364,7 +396,7 @@
 		AEE40E9D25E120C800C6E7CD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				AE6DDAE625E1287B00C0773A /* BookShelf */,
+				AE6DDAE625E1287B00C0773A /* Read */,
 				AE6DDCC625E12ADB00C0773A /* Mine */,
 			);
 			name = Classes;
@@ -390,15 +422,6 @@
 			);
 			path = Tool;
 			sourceTree = "<group>";
-		};
-		AEF8284625E12EA000A28C0E /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				AE6DDCD225E12BBF00C0773A /* GTTabBarViewController.swift */,
-			);
-			name = TabBar;
-			path = GTRead/TabBar;
-			sourceTree = SOURCE_ROOT;
 		};
 		D7649CC42621A9C300F88F43 /* LoginAndRegister */ = {
 			isa = PBXGroup;
@@ -895,7 +918,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gtread.www;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gtread1.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -919,7 +942,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gtread.www;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gtread1.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;

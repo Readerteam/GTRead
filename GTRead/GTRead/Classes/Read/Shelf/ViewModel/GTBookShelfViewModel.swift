@@ -20,6 +20,10 @@ class GTBookShelfViewModel: NSObject {
     var pdfURLs = [URL]()
     var itemWidth: CGFloat = 0
     var itemHeight: CGFloat = 0
+    var isEditing: Bool = false
+    var isSeletedAll: Bool = false
+    var seletedImages = [UIImage]()
+    var seletedEvent: ((_ count: Int)->())?
     
     
     init(viewController: GTBaseViewController,collectionView: UICollectionView) {
@@ -60,6 +64,40 @@ class GTBookShelfViewModel: NSObject {
             images.append(image)
         }
     }
+    
+    func reloadBookDate() {
+        self.createBookShelfData()
+        self.collectionView.reloadData()
+    }
+    // 开启编辑
+    func startEditing(isEditIng: Bool) {
+        self.isEditing = isEditIng
+        self.collectionView.reloadData()
+    }
+    // 取消选中
+    func cancelEditing() {
+        seletedImages.removeAll()
+        self.isEditing = false
+        self.isSeletedAll = false
+        self.collectionView.reloadData()
+    }
+    // 选中全部
+    func seletedAll() {
+        seletedImages.removeAll()
+        seletedImages = images
+        self.isEditing = true
+        self.isSeletedAll = true
+        self.collectionView.reloadData()
+        seletedEvent?(seletedImages.count)
+    }
+    
+    // 删除
+    func deleteImages() {
+        images = images.filter({!seletedImages.contains($0)})
+        self.cancelEditing()
+        self.collectionView.reloadData()
+    }
+    
 }
 
 extension GTBookShelfViewModel: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -72,15 +110,38 @@ extension GTBookShelfViewModel: UICollectionViewDelegate, UICollectionViewDataSo
         if self.images.count > indexPath.row {
             let image = self.images[indexPath.row]
             cell.updateData(image: image)
+            if isEditing {
+                cell.StartEdit()
+                if isSeletedAll {
+                    cell.hiddenRightImageView(hidden: false)
+                }
+            }else{
+                cell.endEdit()
+            }
         }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if self.pdfURLs.count > indexPath.row {
-            let vc = GTReadViewController(path: self.pdfURLs[indexPath.row])
-            vc.hidesBottomBarWhenPushed = true;
-            self.viewController.navigationController?.pushViewController(vc, animated: true)
+            if self.isEditing {
+                let cell = collectionView.cellForItem(at: indexPath) as! GTBookCollectionCell
+                cell.hiddenRightImageView(hidden: cell.selectedStatu)
+                if cell.selectedStatu {
+                    // 选中
+                    seletedImages.append(images[indexPath.row])
+                }else{
+                    // 取消选中
+                    let image = images[indexPath.row]
+                    seletedImages.removeAll(where: {$0 == image})
+                }
+                seletedEvent?(seletedImages.count)
+            }else{
+                ////            let vc = GTReadViewController(path: self.pdfURLs[indexPath.row])
+                //            let vc = GTReadViewController()
+                //            vc.hidesBottomBarWhenPushed = true;
+                //            self.viewController.navigationController?.pushViewController(vc, animated: true)
+            }
         }
     }
 }

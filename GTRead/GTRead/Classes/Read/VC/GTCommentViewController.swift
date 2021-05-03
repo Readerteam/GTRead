@@ -21,7 +21,6 @@ class GTCommentViewController: GTBaseViewController {
     var sendBtn: UIButton!
     var textField: UITextField!
     var dataModel: GTCommentModel?
-    var fistLavel: Bool = true
     var selectedIndex: Int = -1
     var emptyView: UIImageView = {
         let imageview = UIImageView()
@@ -164,21 +163,7 @@ extension GTCommentViewController : UITableViewDelegate,UITableViewDataSource {
                 return 0
             }
             let model: GTCommentItem = lists[indexPath.row]
-            if indexPath.row == selectedIndex {
-                return CGFloat(rowHeight + rowHeight * model.childCnt)
-            }else{
-                if model.childCnt == 0 {
-                    return CGFloat(rowHeight)
-                }else if model.childCnt <= maxCount {
-                    // 内容展示两行
-                    let count = maxCount > model.childCnt ? model.childCnt : maxCount
-                    return CGFloat(rowHeight + rowHeight * count)
-                }else{
-                    // 内容展示两行
-                    let count = maxCount > model.childCnt ? model.childCnt : maxCount
-                    return CGFloat(rowHeight + rowHeight * count + rowHeight)
-                }
-            }
+            return CGFloat(rowHeight + rowHeight * model.childCnt);
         }
         return 0
     }
@@ -196,13 +181,7 @@ extension GTCommentViewController : UITableViewDelegate,UITableViewDataSource {
                 return cell
             }
             let model: GTCommentItem = lists[indexPath.row]
-            cell.cellIndex = indexPath.row
             cell.updateWithData(model: model)
-            cell.buttonEvent = { (index) in
-                self.selectedIndex = index
-                let indexPath = IndexPath(item: index, section: 0)
-                self.tableView.reloadRows(at: [indexPath], with: .none)
-            }
         }
         return cell
     }

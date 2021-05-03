@@ -10,6 +10,7 @@ target 'GTRead' do
   pod 'SnapKit', '~> 5.0.0'
   pod 'ARVideoKit', '~> 1.5.51'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'MJRefresh', '~> 3.5.0'
 
   target 'GTReadTests' do
     inherit! :search_paths
