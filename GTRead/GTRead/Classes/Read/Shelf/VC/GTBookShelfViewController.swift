@@ -52,16 +52,6 @@ class GTBookShelfViewController: GTBaseViewController {
         self.setupView()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        self.navigationController?.setNavigationBarHidden(true, animated: false)
-//    }
-//
-//    override func viewDidDisappear(_ animated: Bool) {
-//        super.viewDidDisappear(animated)
-//        self.navigationController?.setNavigationBarHidden(true, animated: false)
-//    }
-    
     func setupView() {
         self.view.backgroundColor = UIColor.white
         self.setupNavigation()

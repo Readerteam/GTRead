@@ -216,7 +216,14 @@ extension GTNet {
 
 extension GTNet {
     // 书架请求
-
+    func loginTest() {
+        let params = ["userId" : "1", "userPwd" : "root"] as [String : Any]
+        self.requestWith(url: "http://121.4.52.206:8000/loginService/loginFun", httpMethod: .post, params: params) { (json) in
+            debugPrint(json)
+        } error: { (error) in
+            debugPrint(error)
+        }
+    }
     // 下载书籍
 
     // 上传评论
@@ -226,8 +233,8 @@ extension GTNet {
         let params = ["userId" : "3",  "bookId": bookId, "pageNum": pageNum] as [String : Any]
         self.requestWith(url: "http://www.rownh.top:8001/personalService/getComment", httpMethod: .post, params: params) { (json) in
             success(json)
-        } error: { (error) in
-            success(error)
+        } error: { (e) in
+            error(e)
         }
         
     }

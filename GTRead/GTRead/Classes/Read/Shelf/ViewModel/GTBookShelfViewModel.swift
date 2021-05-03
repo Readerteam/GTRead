@@ -137,10 +137,9 @@ extension GTBookShelfViewModel: UICollectionViewDelegate, UICollectionViewDataSo
                 }
                 seletedEvent?(seletedImages.count)
             }else{
-                ////            let vc = GTReadViewController(path: self.pdfURLs[indexPath.row])
-                //            let vc = GTReadViewController()
-                //            vc.hidesBottomBarWhenPushed = true;
-                //            self.viewController.navigationController?.pushViewController(vc, animated: true)
+                let vc = GTReadViewController(path: self.pdfURLs[indexPath.row])
+                vc.hidesBottomBarWhenPushed = true;
+                self.viewController.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }
