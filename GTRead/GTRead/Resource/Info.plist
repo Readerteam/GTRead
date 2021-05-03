@@ -20,6 +20,19 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>AR Camera</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Audiovisual Recording</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Export AR Media</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Export AR Media</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -61,18 +74,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>NSCameraUsageDescription</key>
-    <string>AR Camera</string>
-    <key>NSPhotoLibraryAddUsageDescription</key>
-    <string>Export AR Media</string>
-    <key>NSPhotoLibraryUsageDescription</key>
-    <string>Export AR Media</string>
-    <key>NSMicrophoneUsageDescription</key>
-    <string>Audiovisual Recording</string>
-    <key>NSAppTransportSecurity</key>
-    <dict>
-        <key>NSAllowsArbitraryLoads</key>
-        <true/>
-    </dict>
 </dict>
 </plist>
