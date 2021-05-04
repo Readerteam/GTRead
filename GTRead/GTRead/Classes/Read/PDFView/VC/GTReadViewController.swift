@@ -10,7 +10,7 @@ import PDFKit
 import SceneKit
 import ARKit
 
-class GTReadViewController: UIViewController {
+class GTReadViewController: EyeTrackViewController {
     
     //MARK: - 导航条
     var navgationBarHiddenStatu: Bool = true
@@ -30,12 +30,10 @@ class GTReadViewController: UIViewController {
         return pdfView
     }()
     
-//    //MARK: - 视线相关
-//    var eyeTrackController: EyeTrackController!
-//    var points = [CGPoint]()
-////    var points = [CGPoint(x: 10, y: 10)]
-//    var trackView: UIImageView!
-////
+    //MARK: - 视线相关
+    var eyeTrackController: EyeTrackController!
+    var points = [CGPoint]()
+    var trackView: UIImageView!
     
     var currentDate: TimeInterval = 0
     // pdf视图
@@ -71,6 +69,9 @@ class GTReadViewController: UIViewController {
         // 导航条
         self.setupNavgationBar()
         
+        // 视线
+        self.setupGateTrackView()
+        
         // pdf
         self.setupPdfView()
         
@@ -80,8 +81,7 @@ class GTReadViewController: UIViewController {
         // 记录进入时间
         let date = Date.init()
         currentDate = date.timeIntervalSince1970
-//        self.view.bringSubviewToFront(navgationBar)
-//        self.view.bringSubviewToFront(trackView)
+        self.view.bringSubviewToFront(trackView)
     }
     
     func setupNavgationBar() {
@@ -183,28 +183,26 @@ class GTReadViewController: UIViewController {
 //        GTNet.shared.commitGazeTrackData(starTime: currentDate, lists: temp)
 //        self.points.removeAll()
     }
-        //    private func setupGateTrackView(){
-        //        trackView = UIImageView(frame: CGRect(x: 0, y: 0, width: 75, height: 75))
-        //        trackView.contentMode = .scaleAspectFill
-        //        trackView.image = UIImage(named: "track_icon")
-        //        trackView.isHidden = true
-        //        self.view.addSubview(trackView)
-        //        // 获取机型的尺寸
-        //        let deviceTypeString = Device.getDeviceType()
-        //        let deviceType = DeviceType(rawValue: deviceTypeString)
-        //
-        //        self.eyeTrackController = EyeTrackController(device: Device(type: deviceType ?? .iPad11), smoothingRange: 10, blinkThreshold: .infinity, isHidden: true)
-        //        self.eyeTrackController.onUpdate = { [weak self] info in
-        //            self?.trackView.isHidden = false
-        //            let point = CGPoint(x: info?.centerEyeLookAtPoint.x ?? 0, y: info?.centerEyeLookAtPoint.y ?? 0)
-        //            self?.trackView.center = point
-        //            self?.points.append(point)
-        //        }
-        //        let eyeTrackVC = EyeTrackViewController()
-        //        eyeTrackVC.initialize(eyeTrack: eyeTrackController.eyeTrack)
-        //        self.addChild(eyeTrackVC)
-        //        self.view.addSubview(eyeTrackVC.view)
-        //    }
+    private func setupGateTrackView(){
+        trackView = UIImageView(frame: CGRect(x: 0, y: 0, width: 75, height: 75))
+        trackView.contentMode = .scaleAspectFill
+        trackView.image = UIImage(named: "track_icon")
+        trackView.isHidden = true
+        self.view.addSubview(trackView)
+        // 获取机型的尺寸
+        let deviceTypeString = Device.getDeviceType()
+        let deviceType = DeviceType(rawValue: deviceTypeString)
+
+        self.eyeTrackController = EyeTrackController(device: Device(type: deviceType ?? .iPad11), smoothingRange: 10, blinkThreshold: .infinity, isHidden: true)
+        self.eyeTrackController.onUpdate = { [weak self] info in
+            self?.trackView.isHidden = false
+            let point = CGPoint(x: info?.centerEyeLookAtPoint.x ?? 0, y: info?.centerEyeLookAtPoint.y ?? 0)
+            self?.trackView.center = point
+            self?.points.append(point)
+        }
+        self.initialize(eyeTrack: eyeTrackController.eyeTrack)
+        self.show()
+    }
 }
 
 extension GTReadViewController: GTThumbnailGridViewControllerDelegate {

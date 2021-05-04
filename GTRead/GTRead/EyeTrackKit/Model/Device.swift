@@ -31,7 +31,7 @@ public class Device {
         case DeviceType.iPad11:
             self.screenSize = CGSize(width: 0.1785, height: 0.2476)
             self.screenPointSize = UIScreen.main.bounds.size
-            self.compensation = CGPoint(x: 50, y: 50)
+            self.compensation = CGPoint(x: 0, y: 0)
         case DeviceType.iPad12:
             self.screenSize = CGSize(width: 0.2149, height: 0.2806)
             self.screenPointSize = UIScreen.main.bounds.size
