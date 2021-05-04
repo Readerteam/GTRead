@@ -215,13 +215,6 @@ extension GTNet {
 }
 
 extension GTNet {
-    // 书架请求
-    func loginTest() {
-        let params = ["userId" : "1", "userPwd" : "root"] as [String : Any]
-        self.requestWith(url: "http://121.4.52.206:8000/loginService/loginFun", httpMethod: .post, params: params) { (json) in
-            debugPrint(json)
-        }
-    }
     
     // 个人信息请求
     @objc func requestAccountInfo() {

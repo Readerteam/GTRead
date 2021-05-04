@@ -50,10 +50,7 @@
 		AEF2344A26084B2A00D2B4F8 /* GTBookCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF2344926084B2A00D2B4F8 /* GTBookCollectionCell.swift */; };
 		AEF2344F260865E600D2B4F8 /* GTReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF2344E260865E600D2B4F8 /* GTReadViewController.swift */; };
 		D737140226343D36002DD3DD /* GTAnalyseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D737140126343D36002DD3DD /* GTAnalyseView.swift */; };
-		D737141A26344131002DD3DD /* RegisterAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D737141826344131002DD3DD /* RegisterAccountView.swift */; };
 		D73714212634414F002DD3DD /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73714202634414F002DD3DD /* Common.swift */; };
-		D737144A2634495B002DD3DD /* LoginAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73714492634495B002DD3DD /* LoginAccountView.swift */; };
-		D737149D26370F3E002DD3DD /* GTMineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D737149C26370F3E002DD3DD /* GTMineView.swift */; };
 		E9C6C138E19C2B81657B3AF1 /* Pods_GTReadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5296FA67F20FFA2759B04644 /* Pods_GTReadTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -130,10 +127,7 @@
 		AEF2344926084B2A00D2B4F8 /* GTBookCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTBookCollectionCell.swift; sourceTree = "<group>"; };
 		AEF2344E260865E600D2B4F8 /* GTReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTReadViewController.swift; sourceTree = "<group>"; };
 		D737140126343D36002DD3DD /* GTAnalyseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTAnalyseView.swift; sourceTree = "<group>"; };
-		D737141826344131002DD3DD /* RegisterAccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAccountView.swift; sourceTree = "<group>"; };
 		D73714202634414F002DD3DD /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
-		D73714492634495B002DD3DD /* LoginAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccountView.swift; sourceTree = "<group>"; };
-		D737149C26370F3E002DD3DD /* GTMineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTMineView.swift; sourceTree = "<group>"; };
 		ECEBD343F3440C1FA06D8ABF /* Pods-GTReadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTReadTests.release.xcconfig"; path = "Target Support Files/Pods-GTReadTests/Pods-GTReadTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,8 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				AE0B16ED2632BEF100D4FF89 /* GTCommentModel.swift */,
-				D737149C26370F3E002DD3DD /* GTMineView.swift */,
-				D737141726344131002DD3DD /* LoginAndRegister */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -457,15 +449,6 @@
 				D737140126343D36002DD3DD /* GTAnalyseView.swift */,
 			);
 			path = Analyse;
-			sourceTree = "<group>";
-		};
-		D737141726344131002DD3DD /* LoginAndRegister */ = {
-			isa = PBXGroup;
-			children = (
-				D737141826344131002DD3DD /* RegisterAccountView.swift */,
-				D73714492634495B002DD3DD /* LoginAccountView.swift */,
-			);
-			path = LoginAndRegister;
 			sourceTree = "<group>";
 		};
 		D737141F2634414F002DD3DD /* Common */ = {
@@ -735,7 +718,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE6D99D22641518300580273 /* LoginAccountView.swift in Sources */,
-				D737144A2634495B002DD3DD /* LoginAccountView.swift in Sources */,
 				AEA6E60325EE4E2500148B95 /* GTNet.swift in Sources */,
 				AE6DDCCE25E12B8300C0773A /* GTBaseNavigationViewController.swift in Sources */,
 				AEA5B0A5262C14500064D4AE /* EyeTrackController.swift in Sources */,
@@ -748,7 +730,6 @@
 				AE6D99D32641518300580273 /* RegisterAccountView.swift in Sources */,
 				AEF2344A26084B2A00D2B4F8 /* GTBookCollectionCell.swift in Sources */,
 				D737140226343D36002DD3DD /* GTAnalyseView.swift in Sources */,
-				D737141A26344131002DD3DD /* RegisterAccountView.swift in Sources */,
 				AEA5B0A2262C14500064D4AE /* EyeTrack.swift in Sources */,
 				AE9003542630281200FBD36E /* GTOulineTableViewCell.swift in Sources */,
 				AEA5B0A3262C14500064D4AE /* EyeTrackView.swift in Sources */,
@@ -761,7 +742,6 @@
 				AE900342263021C000FBD36E /* GTThumbnailGridViewController.swift in Sources */,
 				AE6DDCC925E12B3400C0773A /* GTBaseViewController.swift in Sources */,
 				AEE40E9925E120BE00C6E7CD /* SceneDelegate.swift in Sources */,
-				D737149D26370F3E002DD3DD /* GTMineView.swift in Sources */,
 				AEA5B0AA262C14500064D4AE /* EyeTrackViewController.swift in Sources */,
 				AEA5B0A4262C14500064D4AE /* Extension.swift in Sources */,
 				AE90034A2630227700FBD36E /* GTThumbnailCollectionViewCell.swift in Sources */,
