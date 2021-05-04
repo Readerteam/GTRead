@@ -220,6 +220,22 @@ extension GTNet {
         let params = ["userId" : "1", "userPwd" : "root"] as [String : Any]
         self.requestWith(url: "http://121.4.52.206:8000/loginService/loginFun", httpMethod: .post, params: params) { (json) in
             debugPrint(json)
+        }
+    }
+    
+    // 个人信息请求
+    @objc func requestAccountInfo() {
+        let params = ["userId" : UserDefaultKeys.AccountInfo.account] as [String : Any]
+        
+        GTNet.shared.requestWith(url: "http://121.4.52.206:8000/loginService/userInfoFun", httpMethod: .post, params: params) { (json) in
+            debugPrint(json)
+            
+            UserDefaultKeys.AccountInfo.imageUrl = json["headImgUrl"] as! String
+            UserDefaultKeys.AccountInfo.userName = json["nickName"] as! String
+            
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: NSNotification.Name(LoginSuccessfulNotification.rawValue), object: self)
+            }
         } error: { (error) in
             debugPrint(error)
         }
@@ -239,7 +255,6 @@ extension GTNet {
         
     }
 
-    // 测试
     
     // 视线数据
     func commitGazeTrackData(starTime: TimeInterval, lists: Array<[String:CGFloat]>, bookId: Int = 1, pageNum: Int = 1) {
@@ -252,7 +267,6 @@ extension GTNet {
             debugPrint(error)
         }
     }
-    
 }
 
 extension String {

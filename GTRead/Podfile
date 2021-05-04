@@ -11,6 +11,9 @@ target 'GTRead' do
   pod 'ARVideoKit', '~> 1.5.51'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'MJRefresh', '~> 3.5.0'
+  pod 'SDWebImage', '~> 5.0'
+  pod 'Charts'
+  pod 'SDWebImageSwiftUI'
 
   target 'GTReadTests' do
     inherit! :search_paths

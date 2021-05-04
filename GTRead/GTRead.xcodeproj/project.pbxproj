@@ -10,11 +10,13 @@
 		0E94E694AD967475FB6262D8 /* Pods_GTRead_GTReadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCF3F60C55F91B4E58ED9B3 /* Pods_GTRead_GTReadUITests.framework */; };
 		7A9998051B8863AA528DED3E /* Pods_GTRead.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7736EBA3C55BCE74C1F239F7 /* Pods_GTRead.framework */; };
 		AE0B16EE2632BEF100D4FF89 /* GTCommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0B16ED2632BEF100D4FF89 /* GTCommentModel.swift */; };
+		AE6D99D12641518300580273 /* GTMineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6D99CD2641518300580273 /* GTMineView.swift */; };
+		AE6D99D22641518300580273 /* LoginAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6D99CF2641518300580273 /* LoginAccountView.swift */; };
+		AE6D99D32641518300580273 /* RegisterAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6D99D02641518300580273 /* RegisterAccountView.swift */; };
 		AE6DDCC925E12B3400C0773A /* GTBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCC825E12B3400C0773A /* GTBaseViewController.swift */; };
 		AE6DDCCE25E12B8300C0773A /* GTBaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCCD25E12B8300C0773A /* GTBaseNavigationViewController.swift */; };
 		AE6DDCD325E12BBF00C0773A /* GTTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCD225E12BBF00C0773A /* GTTabBarViewController.swift */; };
 		AE6DDCE425E12D1900C0773A /* GTBookShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCE325E12D1900C0773A /* GTBookShelfViewController.swift */; };
-		AE6DDCE925E12D2900C0773A /* GTMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DDCE825E12D2900C0773A /* GTMineViewController.swift */; };
 		AE900342263021C000FBD36E /* GTThumbnailGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE900341263021C000FBD36E /* GTThumbnailGridViewController.swift */; };
 		AE90034A2630227700FBD36E /* GTThumbnailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9003492630227700FBD36E /* GTThumbnailCollectionViewCell.swift */; };
 		AE90034F2630273C00FBD36E /* GTOulineTableviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE90034E2630273C00FBD36E /* GTOulineTableviewController.swift */; };
@@ -47,11 +49,11 @@
 		AEE40EA725E120D900C6E7CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE40EA225E120D900C6E7CD /* Main.storyboard */; };
 		AEF2344A26084B2A00D2B4F8 /* GTBookCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF2344926084B2A00D2B4F8 /* GTBookCollectionCell.swift */; };
 		AEF2344F260865E600D2B4F8 /* GTReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF2344E260865E600D2B4F8 /* GTReadViewController.swift */; };
-		D7649CC0262189EF00F88F43 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7649CBF262189EF00F88F43 /* CustomTableViewCell.swift */; };
-		D7649CC62621AA4C00F88F43 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7649CC52621AA4C00F88F43 /* LoginViewController.swift */; };
-		D7649CCC2621FE3100F88F43 /* ChangeSkinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7649CCB2621FE3100F88F43 /* ChangeSkinViewController.swift */; };
-		D7649CD42622080C00F88F43 /* ChangeSkinViewControllerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7649CD32622080C00F88F43 /* ChangeSkinViewControllerViewCell.swift */; };
-		D7649CD926220C8900F88F43 /* ChangeSkinViewCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7649CD826220C8900F88F43 /* ChangeSkinViewCollectionView.swift */; };
+		D737140226343D36002DD3DD /* GTAnalyseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D737140126343D36002DD3DD /* GTAnalyseView.swift */; };
+		D737141A26344131002DD3DD /* RegisterAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D737141826344131002DD3DD /* RegisterAccountView.swift */; };
+		D73714212634414F002DD3DD /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73714202634414F002DD3DD /* Common.swift */; };
+		D737144A2634495B002DD3DD /* LoginAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73714492634495B002DD3DD /* LoginAccountView.swift */; };
+		D737149D26370F3E002DD3DD /* GTMineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D737149C26370F3E002DD3DD /* GTMineView.swift */; };
 		E9C6C138E19C2B81657B3AF1 /* Pods_GTReadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5296FA67F20FFA2759B04644 /* Pods_GTReadTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,11 +84,13 @@
 		94CB0EA52D5D83DA63E9853B /* Pods-GTRead.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTRead.debug.xcconfig"; path = "Target Support Files/Pods-GTRead/Pods-GTRead.debug.xcconfig"; sourceTree = "<group>"; };
 		970A0AF2392A8CD611363A14 /* Pods-GTReadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTReadTests.debug.xcconfig"; path = "Target Support Files/Pods-GTReadTests/Pods-GTReadTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0B16ED2632BEF100D4FF89 /* GTCommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTCommentModel.swift; sourceTree = "<group>"; };
+		AE6D99CD2641518300580273 /* GTMineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTMineView.swift; sourceTree = "<group>"; };
+		AE6D99CF2641518300580273 /* LoginAccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAccountView.swift; sourceTree = "<group>"; };
+		AE6D99D02641518300580273 /* RegisterAccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAccountView.swift; sourceTree = "<group>"; };
 		AE6DDCC825E12B3400C0773A /* GTBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTBaseViewController.swift; sourceTree = "<group>"; };
 		AE6DDCCD25E12B8300C0773A /* GTBaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTBaseNavigationViewController.swift; sourceTree = "<group>"; };
 		AE6DDCD225E12BBF00C0773A /* GTTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTTabBarViewController.swift; sourceTree = "<group>"; };
 		AE6DDCE325E12D1900C0773A /* GTBookShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTBookShelfViewController.swift; sourceTree = "<group>"; };
-		AE6DDCE825E12D2900C0773A /* GTMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTMineViewController.swift; sourceTree = "<group>"; };
 		AE900341263021C000FBD36E /* GTThumbnailGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTThumbnailGridViewController.swift; sourceTree = "<group>"; };
 		AE9003492630227700FBD36E /* GTThumbnailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTThumbnailCollectionViewCell.swift; sourceTree = "<group>"; };
 		AE90034E2630273C00FBD36E /* GTOulineTableviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTOulineTableviewController.swift; sourceTree = "<group>"; };
@@ -125,11 +129,11 @@
 		AEE40EA425E120D900C6E7CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEF2344926084B2A00D2B4F8 /* GTBookCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTBookCollectionCell.swift; sourceTree = "<group>"; };
 		AEF2344E260865E600D2B4F8 /* GTReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTReadViewController.swift; sourceTree = "<group>"; };
-		D7649CBF262189EF00F88F43 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		D7649CC52621AA4C00F88F43 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D7649CCB2621FE3100F88F43 /* ChangeSkinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSkinViewController.swift; sourceTree = "<group>"; };
-		D7649CD32622080C00F88F43 /* ChangeSkinViewControllerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSkinViewControllerViewCell.swift; sourceTree = "<group>"; };
-		D7649CD826220C8900F88F43 /* ChangeSkinViewCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSkinViewCollectionView.swift; sourceTree = "<group>"; };
+		D737140126343D36002DD3DD /* GTAnalyseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTAnalyseView.swift; sourceTree = "<group>"; };
+		D737141826344131002DD3DD /* RegisterAccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAccountView.swift; sourceTree = "<group>"; };
+		D73714202634414F002DD3DD /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		D73714492634495B002DD3DD /* LoginAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccountView.swift; sourceTree = "<group>"; };
+		D737149C26370F3E002DD3DD /* GTMineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTMineView.swift; sourceTree = "<group>"; };
 		ECEBD343F3440C1FA06D8ABF /* Pods-GTReadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GTReadTests.release.xcconfig"; path = "Target Support Files/Pods-GTReadTests/Pods-GTReadTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				AE0B16ED2632BEF100D4FF89 /* GTCommentModel.swift */,
+				D737149C26370F3E002DD3DD /* GTMineView.swift */,
+				D737141726344131002DD3DD /* LoginAndRegister */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,6 +258,15 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		AE6D99CE2641518300580273 /* LoginAndRegister */ = {
+			isa = PBXGroup;
+			children = (
+				AE6D99CF2641518300580273 /* LoginAccountView.swift */,
+				AE6D99D02641518300580273 /* RegisterAccountView.swift */,
+			);
+			path = LoginAndRegister;
+			sourceTree = "<group>";
+		};
 		AE6DDAE625E1287B00C0773A /* Read */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,10 +280,8 @@
 		AE6DDCC625E12ADB00C0773A /* Mine */ = {
 			isa = PBXGroup;
 			children = (
-				D7649CCA2621FDF800F88F43 /* ChangeSkin */,
-				D7649CC42621A9C300F88F43 /* LoginAndRegister */,
-				AE6DDCE825E12D2900C0773A /* GTMineViewController.swift */,
-				D7649CBF262189EF00F88F43 /* CustomTableViewCell.swift */,
+				AE6D99CD2641518300580273 /* GTMineView.swift */,
+				AE6D99CE2641518300580273 /* LoginAndRegister */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -409,6 +422,7 @@
 		AEE40E9D25E120C800C6E7CD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D737140026343D36002DD3DD /* Analyse */,
 				AE6DDAE625E1287B00C0773A /* Read */,
 				AE6DDCC625E12ADB00C0773A /* Mine */,
 			);
@@ -430,28 +444,36 @@
 		AEE40EAD25E120EE00C6E7CD /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				D737141F2634414F002DD3DD /* Common */,
 				AECB23922606EA38001B2C84 /* GTBook */,
 				AEA6E1F925EE12A500148B95 /* NetWork */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
 		};
-		D7649CC42621A9C300F88F43 /* LoginAndRegister */ = {
+		D737140026343D36002DD3DD /* Analyse */ = {
 			isa = PBXGroup;
 			children = (
-				D7649CC52621AA4C00F88F43 /* LoginViewController.swift */,
+				D737140126343D36002DD3DD /* GTAnalyseView.swift */,
+			);
+			path = Analyse;
+			sourceTree = "<group>";
+		};
+		D737141726344131002DD3DD /* LoginAndRegister */ = {
+			isa = PBXGroup;
+			children = (
+				D737141826344131002DD3DD /* RegisterAccountView.swift */,
+				D73714492634495B002DD3DD /* LoginAccountView.swift */,
 			);
 			path = LoginAndRegister;
 			sourceTree = "<group>";
 		};
-		D7649CCA2621FDF800F88F43 /* ChangeSkin */ = {
+		D737141F2634414F002DD3DD /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				D7649CCB2621FE3100F88F43 /* ChangeSkinViewController.swift */,
-				D7649CD32622080C00F88F43 /* ChangeSkinViewControllerViewCell.swift */,
-				D7649CD826220C8900F88F43 /* ChangeSkinViewCollectionView.swift */,
+				D73714202634414F002DD3DD /* Common.swift */,
 			);
-			path = ChangeSkin;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		EB1BF41AFB4E335A24066273 /* Pods */ = {
@@ -712,38 +734,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7649CC62621AA4C00F88F43 /* LoginViewController.swift in Sources */,
+				AE6D99D22641518300580273 /* LoginAccountView.swift in Sources */,
+				D737144A2634495B002DD3DD /* LoginAccountView.swift in Sources */,
 				AEA6E60325EE4E2500148B95 /* GTNet.swift in Sources */,
 				AE6DDCCE25E12B8300C0773A /* GTBaseNavigationViewController.swift in Sources */,
 				AEA5B0A5262C14500064D4AE /* EyeTrackController.swift in Sources */,
 				AE0B16EE2632BEF100D4FF89 /* GTCommentModel.swift in Sources */,
 				AE90034F2630273C00FBD36E /* GTOulineTableviewController.swift in Sources */,
+				D73714212634414F002DD3DD /* Common.swift in Sources */,
 				AE9003592630396300FBD36E /* GTCommentViewController.swift in Sources */,
 				AEA5B0A8262C14500064D4AE /* Face.swift in Sources */,
 				AEE40E9825E120BE00C6E7CD /* AppDelegate.swift in Sources */,
+				AE6D99D32641518300580273 /* RegisterAccountView.swift in Sources */,
 				AEF2344A26084B2A00D2B4F8 /* GTBookCollectionCell.swift in Sources */,
+				D737140226343D36002DD3DD /* GTAnalyseView.swift in Sources */,
+				D737141A26344131002DD3DD /* RegisterAccountView.swift in Sources */,
 				AEA5B0A2262C14500064D4AE /* EyeTrack.swift in Sources */,
 				AE9003542630281200FBD36E /* GTOulineTableViewCell.swift in Sources */,
 				AEA5B0A3262C14500064D4AE /* EyeTrackView.swift in Sources */,
 				AECB23992606EE64001B2C84 /* GTBookShelfViewModel.swift in Sources */,
-				D7649CD42622080C00F88F43 /* ChangeSkinViewControllerViewCell.swift in Sources */,
+				AE6D99D12641518300580273 /* GTMineView.swift in Sources */,
 				AEA5B0A7262C14500064D4AE /* EyeTrackInfo.swift in Sources */,
 				AE9010CC260B0D3500D5966D /* GTBook.swift in Sources */,
 				AE6DDCD325E12BBF00C0773A /* GTTabBarViewController.swift in Sources */,
 				AE90035E2630462A00FBD36E /* GTCommentViewCell.swift in Sources */,
 				AE900342263021C000FBD36E /* GTThumbnailGridViewController.swift in Sources */,
-				AE6DDCE925E12D2900C0773A /* GTMineViewController.swift in Sources */,
 				AE6DDCC925E12B3400C0773A /* GTBaseViewController.swift in Sources */,
 				AEE40E9925E120BE00C6E7CD /* SceneDelegate.swift in Sources */,
-				D7649CCC2621FE3100F88F43 /* ChangeSkinViewController.swift in Sources */,
+				D737149D26370F3E002DD3DD /* GTMineView.swift in Sources */,
 				AEA5B0AA262C14500064D4AE /* EyeTrackViewController.swift in Sources */,
 				AEA5B0A4262C14500064D4AE /* Extension.swift in Sources */,
 				AE90034A2630227700FBD36E /* GTThumbnailCollectionViewCell.swift in Sources */,
 				AEA5B0A6262C14500064D4AE /* Eye.swift in Sources */,
 				AE6DDCE425E12D1900C0773A /* GTBookShelfViewController.swift in Sources */,
 				AEF2344F260865E600D2B4F8 /* GTReadViewController.swift in Sources */,
-				D7649CC0262189EF00F88F43 /* CustomTableViewCell.swift in Sources */,
-				D7649CD926220C8900F88F43 /* ChangeSkinViewCollectionView.swift in Sources */,
 				AEA5B0A9262C14500064D4AE /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
