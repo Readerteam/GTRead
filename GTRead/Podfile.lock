@@ -1,14 +1,25 @@
 PODS:
   - Alamofire (5.4.2)
   - ARVideoKit (1.5.51)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
   - MJRefresh (3.5.0)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
+  - SDWebImageSwiftUI (2.0.2):
+    - SDWebImage (~> 5.10)
   - SnapKit (5.0.1)
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - ARVideoKit (~> 1.5.51)
+  - Charts
   - MJRefresh (~> 3.5.0)
+  - SDWebImage (~> 5.0)
+  - SDWebImageSwiftUI
   - SnapKit (~> 5.0.0)
   - SwiftyJSON (~> 4.0)
 
@@ -16,17 +27,23 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - ARVideoKit
+    - Charts
     - MJRefresh
+    - SDWebImage
+    - SDWebImageSwiftUI
     - SnapKit
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
   ARVideoKit: cd70e1e49e042ed4a88fb59964c17520e34f7f5b
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 57c2f977d2823e249f2769c9feb3c6cad355ebf5
+PODFILE CHECKSUM: 2207d01d2738775a5e5ebf57a94773164128f805
 
 COCOAPODS: 1.10.1
