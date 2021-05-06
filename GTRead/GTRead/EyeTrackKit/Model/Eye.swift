@@ -10,7 +10,7 @@ import UIKit
 import SceneKit
 import ARKit
 
-// 目情報保持クラス
+
 public class Eye {
     public var lookAtPosition: CGPoint = CGPoint(x: 0, y: 0)
     public var lookAtPoint: CGPoint = CGPoint(x: 0, y: 0)
@@ -49,14 +49,17 @@ public class Eye {
         self.node.geometry?.firstMaterial?.diffuse.contents = UIColor.clear
     }
     
-    // Deviceとの距離を取得
+    
     public func getDistanceToDevice() -> Float {
         (self.node.worldPosition - SCNVector3Zero).length()
     }
 
-    // [目と視点を結ぶ直線]と[デバイスのスクリーン平面]の交点を取得
+    
     public func hittingAt(device: Device) -> CGPoint {
         let deviceScreenEyeHitTestResults = device.node.hitTestWithSegment(from: self.target.worldPosition, to: self.node.worldPosition, options: nil)
+        print("start-------")
+        print("\(deviceScreenEyeHitTestResults)")
+        print("end--------")
         for result in deviceScreenEyeHitTestResults {
             self.lookAtPosition.x = CGFloat(result.localCoordinates.x) / (device.screenSize.width / 2) * device.screenPointSize.width + device.compensation.x
             self.lookAtPosition.y = CGFloat(result.localCoordinates.y) / (device.screenSize.height / 2) * device.screenPointSize.height + device.compensation.y

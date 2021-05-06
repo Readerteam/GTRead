@@ -10,8 +10,8 @@ import UIKit
 import SceneKit
 import ARKit
 
-// 顔情報保持クラス
 public class Face {
+    // 父结点
     public let node: SCNNode
     public let rightEye: Eye
     public let leftEye: Eye
@@ -28,16 +28,19 @@ public class Face {
     }
 
     public func update(anchor: ARFaceAnchor) {
-        // 座標更新
         self.transform = anchor.transform
+        // 左眼的位置和方向的变换矩阵
         self.leftEye.node.simdTransform = anchor.leftEyeTransform
+        // 右眼的位置和方向的变换矩阵
         self.rightEye.node.simdTransform = anchor.rightEyeTransform
-        // 瞬き情報更新
+        // 左眼的偏移值
         self.leftEye.blink = anchor.blendShapes[.eyeBlinkLeft]?.floatValue ?? 0.0
+        print("leftEye-----\(self.leftEye.blink)")
+        // 右眼的偏移值
         self.rightEye.blink = anchor.blendShapes[.eyeBlinkRight]?.floatValue ?? 0.0
+        print("rightEye-----\(self.rightEye.blink)")
     }
 
-    // デバイスとの距離を取得
     public func getDistanceToDevice() -> Float {
         // Average distance from two eyes
         (self.leftEye.getDistanceToDevice() + self.rightEye.getDistanceToDevice()) / 2
